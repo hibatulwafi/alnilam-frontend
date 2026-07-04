@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Alnilam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-logo">A</span>
+      <span>ALNILAM</span>
+    </a>
+    <div>
+      <span style="color: var(--text-secondary); font-size: 0.9375rem;">Sudah punya akun?</span>
+      <a href="login.html" class="btn btn-outline btn-sm" style="margin-left: 1rem;">Sign In</a>
+    </div>
+  </div>
+</nav>
+
+<section style="min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 4rem;">
+
+  <div style="position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 4rem;">
+    <img
+      src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1200&q=80"
+      alt=""
+      style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5;"
+    />
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);"></div>
+    <div style="position: relative; z-index: 2; max-width: 500px;">
+      <div class="eyebrow mb-2">JOIN THE PLATFORM</div>
+      <h2 class="display-2 mb-3">
+        Start creating<br />
+        <span class="text-accent">today.</span>
+      </h2>
+      <p style="color: var(--text-secondary); font-size: 1.0625rem; margin-bottom: 2rem;">
+        Bergabung dengan 2,500+ brand dan 500+ creator yang percayakan konten mereka ke Alnilam.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="text-accent">✓</span>
+          <span>Gratis daftar akun</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="text-accent">✓</span>
+          <span>Escrow payment protection</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="text-accent">✓</span>
+          <span>Real-time collaboration tools</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="text-accent">✓</span>
+          <span>24/7 support Indonesia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: center; padding: 4rem;">
+    <div style="width: 100%; max-width: 460px;">
+      <div class="eyebrow mb-2">CREATE ACCOUNT</div>
+      <h1 class="heading-1 mb-4">Get started</h1>
+
+      <form>
+        <!-- Role selector -->
+        <div class="form-group">
+          <label class="form-label">Saya adalah</label>
+          <div class="grid grid-cols-2" style="gap: 0.75rem;">
+            <button type="button" style="padding: 1.25rem; background: rgba(201, 166, 107, 0.1); border: 2px solid var(--accent-primary); border-radius: 6px; text-align: left; cursor: pointer; color: var(--text-primary);">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🛍️</div>
+              <div style="font-weight: 600; margin-bottom: 0.25rem;">Client</div>
+              <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Mau pesan jasa</div>
+            </button>
+            <button type="button" style="padding: 1.25rem; background: var(--bg-card); border: 2px solid var(--border-subtle); border-radius: 6px; text-align: left; cursor: pointer; color: var(--text-secondary);">
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎨</div>
+              <div style="font-weight: 600; margin-bottom: 0.25rem;">Creator</div>
+              <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Content creator</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nama lengkap</label>
+          <input type="text" class="form-input" placeholder="Nama sesuai KTP" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="you@company.com" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nomor HP <span style="color: var(--text-tertiary); font-weight: 400; text-transform: none; letter-spacing: 0;">(opsional)</span></label>
+          <input type="tel" class="form-input" placeholder="+62 812 3456 7890" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password <span style="color: var(--text-tertiary); font-weight: 400; text-transform: none; letter-spacing: 0;">(min 8 karakter)</span></label>
+          <input type="password" class="form-input" placeholder="••••••••" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox" checked />
+            <span style="font-size: 0.875rem; color: var(--text-secondary);">
+              Saya setuju dengan <a href="#" class="text-accent" style="text-decoration: underline;">Terms of Service</a> dan <a href="#" class="text-accent" style="text-decoration: underline;">Privacy Policy</a>
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent" style="width: 100%; padding: 1rem; font-size: 1rem;">
+          Create Account →
+        </button>
+
+        <div style="display: flex; align-items: center; gap: 1rem; margin: 2rem 0;">
+          <div style="flex: 1; height: 1px; background: var(--border-subtle);"></div>
+          <span style="font-size: 0.75rem; color: var(--text-tertiary); letter-spacing: 0.15em; text-transform: uppercase;">Or</span>
+          <div style="flex: 1; height: 1px; background: var(--border-subtle);"></div>
+        </div>
+
+        <button type="button" class="btn btn-outline" style="width: 100%; gap: 0.75rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg>
+          Continue with Google
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 900px) {
+    body > section {
+      grid-template-columns: 1fr !important;
+    }
+    body > section > div:first-child {
+      display: none;
+    }
+  }
+</style>
+
+</body>
+</html>

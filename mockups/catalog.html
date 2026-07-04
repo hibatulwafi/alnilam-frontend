@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalog — Alnilam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-logo">A</span>
+      <span>ALNILAM</span>
+    </a>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="catalog.html" class="nav-link active">Katalog</a>
+      <a href="creator-profile.html" class="nav-link">Creators</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Blog</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+      <a href="register.html" class="btn btn-outline btn-sm">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<section style="padding: 8rem 0 3rem; border-bottom: 1px solid var(--border-subtle);">
+  <div class="container">
+    <div class="eyebrow mb-2">CATALOG · 1,145 services</div>
+    <h1 class="display-2 mb-3">Discover <span class="text-accent">world-class</span> creators.</h1>
+
+    <!-- Search bar -->
+    <div style="display: flex; gap: 0.75rem; max-width: 700px;">
+      <div style="flex: 1; position: relative;">
+        <svg style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-tertiary);" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input
+          type="search"
+          placeholder="Cari jasa, kategori, atau creator..."
+          class="form-input"
+          style="padding-left: 3rem;"
+          value="video"
+        />
+      </div>
+      <select class="form-select" style="width: 180px;">
+        <option>Terpopuler</option>
+        <option>Terbaru</option>
+        <option>Harga terendah</option>
+        <option>Harga tertinggi</option>
+        <option>Rating tertinggi</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<!-- Main content -->
+<section style="padding: 3rem 0;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 260px 1fr; gap: 3rem;">
+
+      <!-- Sidebar filter -->
+      <aside>
+        <div style="position: sticky; top: 6rem;">
+          <div class="mb-4">
+            <h3 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+              Kategori
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <button class="sidebar-link" style="background: var(--bg-tertiary); color: var(--accent-primary); border-left: 3px solid var(--accent-primary); padding-left: 0.75rem;">
+                Semua <span style="margin-left: auto; color: var(--text-tertiary); font-size: 0.8125rem;">1,145</span>
+              </button>
+              <button class="sidebar-link">
+                Video Production <span style="margin-left: auto; color: var(--text-tertiary); font-size: 0.8125rem;">245</span>
+              </button>
+              <button class="sidebar-link">
+                Fotografi <span style="margin-left: auto; color: var(--text-tertiary); font-size: 0.8125rem;">312</span>
+              </button>
+              <button class="sidebar-link">
+                Copywriting <span style="margin-left: auto; color: var(--text-tertiary); font-size: 0.8125rem;">189</span>
+              </button>
+              <button class="sidebar-link">
+                Grafis & Desain <span style="margin-left: auto; color: var(--text-tertiary); font-size: 0.8125rem;">278</span>
+              </button>
+              <button class="sidebar-link">
+                Live Commerce <span style="margin-left: auto; color: var(--text-tertiary); font-size: 0.8125rem;">67</span>
+              </button>
+              <button class="sidebar-link">
+                3D & Motion <span style="margin-left: auto; color: var(--text-tertiary); font-size: 0.8125rem;">54</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="mb-4">
+            <h3 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+              Rentang Harga
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <label class="form-checkbox"><input type="checkbox" /> < Rp 1 juta</label>
+              <label class="form-checkbox"><input type="checkbox" checked /> Rp 1 - 5 juta</label>
+              <label class="form-checkbox"><input type="checkbox" checked /> Rp 5 - 15 juta</label>
+              <label class="form-checkbox"><input type="checkbox" /> Rp 15 - 50 juta</label>
+              <label class="form-checkbox"><input type="checkbox" /> > Rp 50 juta</label>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="mb-4">
+            <h3 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+              Waktu Kerja
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <label class="form-checkbox"><input type="checkbox" /> < 3 hari</label>
+              <label class="form-checkbox"><input type="checkbox" /> 3 - 7 hari</label>
+              <label class="form-checkbox"><input type="checkbox" /> 1 - 2 minggu</label>
+              <label class="form-checkbox"><input type="checkbox" /> > 2 minggu</label>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="mb-4">
+            <h3 style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem;">
+              Rating Minimum
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <label class="form-checkbox"><input type="radio" name="rating" /> ★★★★★ (5)</label>
+              <label class="form-checkbox"><input type="radio" name="rating" checked /> ★★★★☆ (4+)</label>
+              <label class="form-checkbox"><input type="radio" name="rating" /> ★★★☆☆ (3+)</label>
+              <label class="form-checkbox"><input type="radio" name="rating" /> Semua</label>
+            </div>
+          </div>
+
+          <button class="btn btn-outline" style="width: 100%;">Reset Filter</button>
+        </div>
+      </aside>
+
+      <!-- Results -->
+      <main>
+        <!-- Active filters -->
+        <div style="margin-bottom: 2rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <span style="font-size: 0.8125rem; color: var(--text-tertiary);">Filter aktif:</span>
+          <span class="badge badge-accent" style="cursor: pointer;">Rp 1-5jt ×</span>
+          <span class="badge badge-accent" style="cursor: pointer;">Rp 5-15jt ×</span>
+          <span class="badge badge-accent" style="cursor: pointer;">Rating 4+ ×</span>
+          <span class="badge badge-accent" style="cursor: pointer;">"video" ×</span>
+          <a href="#" style="font-size: 0.8125rem; color: var(--text-secondary); margin-left: 0.5rem; text-decoration: underline;">Clear all</a>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-3">
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+              <div class="product-badges">
+                <span class="badge badge-accent">FEATURED</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">Product Video 30 Detik Cinematic</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.9</span>
+                <span>·</span>
+                <span>47 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 3.500.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">7 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+              <div class="product-badges">
+                <span class="badge badge-accent">FEATURED</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">Company Profile Video Premium</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.9</span>
+                <span>·</span>
+                <span>23 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 12.500.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">14 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">TikTok Ad Video Vertical Format</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.7</span>
+                <span>·</span>
+                <span>34 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 2.200.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">5 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+              <div class="product-badges">
+                <span class="badge badge-accent">POPULAR</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">Wedding Cinematic Video</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.8</span>
+                <span>·</span>
+                <span>62 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 8.500.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">10 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">Event Documentary Video</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.6</span>
+                <span>·</span>
+                <span>18 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 6.000.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">7 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">YouTube Long-form Editing</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.8</span>
+                <span>·</span>
+                <span>29 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 1.800.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">3 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1461151304267-38535e780c79?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+              <div class="product-badges">
+                <span class="badge badge-accent">NEW</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">Instagram Reel Series (Set 5)</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.9</span>
+                <span>·</span>
+                <span>12 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 4.500.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">7 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">Music Video Production</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.7</span>
+                <span>·</span>
+                <span>15 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 15.000.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">21 hari</span>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?w=600&q=80" alt="" class="product-image" />
+              <div class="product-overlay"></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Video Production</div>
+              <h3 class="product-title">Corporate Interview Video</h3>
+              <div class="product-meta">
+                <span class="product-rating">★ 4.8</span>
+                <span>·</span>
+                <span>21 orders</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <div>
+                <div class="product-price-from">Mulai dari</div>
+                <div class="product-price">Rp 7.500.000</div>
+              </div>
+              <span style="color: var(--text-tertiary); font-size: 0.8125rem;">10 hari</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Pagination -->
+        <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 3rem;">
+          <button class="btn btn-ghost btn-sm" disabled>← Prev</button>
+          <button class="btn btn-outline btn-sm" style="width: 40px; padding: 0.5rem;">1</button>
+          <button class="btn btn-ghost btn-sm" style="width: 40px; padding: 0.5rem;">2</button>
+          <button class="btn btn-ghost btn-sm" style="width: 40px; padding: 0.5rem;">3</button>
+          <span style="color: var(--text-tertiary); padding: 0 0.5rem;">...</span>
+          <button class="btn btn-ghost btn-sm" style="width: 40px; padding: 0.5rem;">28</button>
+          <button class="btn btn-ghost btn-sm">Next →</button>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top: 0; border-top: 0;">
+      <div>© 2026 Alnilam. All rights reserved.</div>
+      <div>
+        <a href="#" style="margin-right: 1.5rem;">Terms</a>
+        <a href="#" style="margin-right: 1.5rem;">Privacy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

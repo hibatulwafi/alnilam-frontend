@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — Alnilam Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/theme.css" />
+</head>
+<body>
+
+<div class="admin-layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="nav-brand-logo">A</span>
+      <div>
+        <div>ALNILAM</div>
+        <div style="font-size: 0.6875rem; color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;">Admin</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Overview</div>
+      <ul class="sidebar-nav">
+        <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">◈</span><span>Dashboard</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Marketplace</div>
+      <ul class="sidebar-nav">
+        <li><a href="products.html" class="sidebar-link"><span class="sidebar-icon">▤</span><span>Products</span></a></li>
+        <li><a href="orders.html" class="sidebar-link"><span class="sidebar-icon">▧</span><span>Orders</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">People</div>
+      <ul class="sidebar-nav">
+        <li><a href="users.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Users</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">System</div>
+      <ul class="sidebar-nav">
+        <li><a href="settings.html" class="sidebar-link active" style="position: relative;"><span class="sidebar-icon">✧</span><span>Settings</span></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="main-header">
+      <div>
+        <div class="eyebrow mb-1">SYSTEM</div>
+        <h1>Settings</h1>
+      </div>
+      <button class="btn btn-accent btn-sm">Save Changes</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 2.5rem;">
+
+      <!-- Settings nav -->
+      <aside>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 2px;">
+          <li><a href="#general" class="sidebar-link" style="background: var(--bg-tertiary); color: var(--accent-primary);"><span class="sidebar-icon">◈</span><span>General</span></a></li>
+          <li><a href="#platform" class="sidebar-link"><span class="sidebar-icon">▤</span><span>Platform Fee</span></a></li>
+          <li><a href="#payment" class="sidebar-link"><span class="sidebar-icon">◐</span><span>Payment Gateway</span></a></li>
+          <li><a href="#notification" class="sidebar-link"><span class="sidebar-icon">◯</span><span>Notifications</span></a></li>
+          <li><a href="#security" class="sidebar-link"><span class="sidebar-icon">⚿</span><span>Security</span></a></li>
+          <li><a href="#integrations" class="sidebar-link"><span class="sidebar-icon">◊</span><span>Integrations</span></a></li>
+          <li><a href="#backup" class="sidebar-link"><span class="sidebar-icon">◱</span><span>Backup</span></a></li>
+        </ul>
+      </aside>
+
+      <!-- Settings content -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+        <!-- General -->
+        <div class="card" id="general">
+          <div class="card-body">
+            <h2 style="font-weight: 700; margin-bottom: 0.5rem;">General</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Basic platform configuration</p>
+
+            <div class="form-group">
+              <label class="form-label">Platform Name</label>
+              <input type="text" class="form-input" value="Alnilam" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Tagline</label>
+              <input type="text" class="form-input" value="Where brands meet world-class creators" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Support Email</label>
+              <input type="email" class="form-input" value="support@alnilam.id" />
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Default Timezone</label>
+                <select class="form-select">
+                  <option>Asia/Jakarta (WIB, UTC+7)</option>
+                  <option>Asia/Makassar (WITA, UTC+8)</option>
+                  <option>Asia/Jayapura (WIT, UTC+9)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Default Currency</label>
+                <select class="form-select">
+                  <option>IDR (Indonesian Rupiah)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Fee -->
+        <div class="card" id="platform">
+          <div class="card-body">
+            <h2 style="font-weight: 700; margin-bottom: 0.5rem;">Platform Fee</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure marketplace commission structure</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label">Platform Commission</label>
+                <div style="display: flex; align-items: center; background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: 4px;">
+                  <input type="number" style="flex: 1; padding: 0.875rem 1rem; background: transparent; border: none; color: var(--text-primary); outline: none;" value="15" />
+                  <span style="padding: 0.875rem 1rem; color: var(--text-tertiary); font-weight: 600;">%</span>
+                </div>
+                <div class="form-hint">Deducted dari total order sebelum payout ke Creator</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Payment Gateway Fee (absorbed)</label>
+                <div style="display: flex; align-items: center; background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: 4px;">
+                  <input type="number" style="flex: 1; padding: 0.875rem 1rem; background: transparent; border: none; color: var(--text-primary); outline: none;" value="2.5" step="0.1" />
+                  <span style="padding: 0.875rem 1rem; color: var(--text-tertiary); font-weight: 600;">%</span>
+                </div>
+                <div class="form-hint">Included dalam platform fee, tidak charge Creator</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">PPh 23 (with NPWP)</label>
+                <div style="display: flex; align-items: center; background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: 4px;">
+                  <input type="number" style="flex: 1; padding: 0.875rem 1rem; background: transparent; border: none; color: var(--text-primary); outline: none;" value="2" step="0.1" />
+                  <span style="padding: 0.875rem 1rem; color: var(--text-tertiary); font-weight: 600;">%</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">PPN Keluaran</label>
+                <div style="display: flex; align-items: center; background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: 4px;">
+                  <input type="number" style="flex: 1; padding: 0.875rem 1rem; background: transparent; border: none; color: var(--text-primary); outline: none;" value="11" step="0.1" />
+                  <span style="padding: 0.875rem 1rem; color: var(--text-tertiary); font-weight: 600;">%</span>
+                </div>
+                <div class="form-hint">Ditambahkan ke total Client saat checkout</div>
+              </div>
+            </div>
+
+            <!-- Preview calculation -->
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--bg-elevated); border-radius: 6px;">
+              <div style="font-size: 0.75rem; color: var(--text-tertiary); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">
+                💰 Fee Calculation Preview (Order Rp 5.000.000)
+              </div>
+              <table style="width: 100%; font-size: 0.9375rem;">
+                <tr>
+                  <td style="padding: 0.375rem 0; color: var(--text-secondary);">Product Price</td>
+                  <td style="padding: 0.375rem 0; text-align: right; font-weight: 600;">Rp 5.000.000</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.375rem 0; color: var(--text-secondary);">+ PPN 11%</td>
+                  <td style="padding: 0.375rem 0; text-align: right;">Rp 550.000</td>
+                </tr>
+                <tr style="border-top: 1px solid var(--border-subtle);">
+                  <td style="padding: 0.375rem 0; font-weight: 600;">Client pays</td>
+                  <td style="padding: 0.375rem 0; text-align: right; font-weight: 700;">Rp 5.550.000</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.375rem 0; color: var(--text-secondary); padding-top: 0.75rem;">− Platform Fee (15%)</td>
+                  <td style="padding: 0.375rem 0; text-align: right; color: var(--danger); padding-top: 0.75rem;">Rp -750.000</td>
+                </tr>
+                <tr>
+                  <td style="padding: 0.375rem 0; color: var(--text-secondary);">− PPh 23 (2%)</td>
+                  <td style="padding: 0.375rem 0; text-align: right; color: var(--danger);">Rp -85.000</td>
+                </tr>
+                <tr style="border-top: 1px solid var(--border-subtle);">
+                  <td style="padding: 0.375rem 0; font-weight: 600; color: var(--accent-primary);">Creator receives (H+3)</td>
+                  <td style="padding: 0.375rem 0; text-align: right; font-weight: 700; color: var(--accent-primary);">Rp 4.165.000</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Gateway -->
+        <div class="card" id="payment">
+          <div class="card-body">
+            <h2 style="font-weight: 700; margin-bottom: 0.5rem;">Payment Gateway</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Midtrans configuration</p>
+
+            <div class="form-group">
+              <label class="form-label">Environment</label>
+              <select class="form-select">
+                <option>Production (Live)</option>
+                <option selected>Sandbox (Development)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Merchant ID</label>
+              <input type="text" class="form-input" value="G1234567" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Server Key <span style="color: var(--text-tertiary); font-weight: 400; text-transform: none; letter-spacing: 0;">(masked)</span></label>
+              <input type="password" class="form-input" value="SB-Mid-server-••••••••••••••••" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Client Key <span style="color: var(--text-tertiary); font-weight: 400; text-transform: none; letter-spacing: 0;">(masked)</span></label>
+              <input type="password" class="form-input" value="SB-Mid-client-••••••••••••••••" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Enabled Payment Methods</label>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.5rem;">
+                <label class="form-checkbox"><input type="checkbox" checked /> Bank Transfer (VA)</label>
+                <label class="form-checkbox"><input type="checkbox" checked /> GoPay</label>
+                <label class="form-checkbox"><input type="checkbox" checked /> OVO</label>
+                <label class="form-checkbox"><input type="checkbox" checked /> Dana</label>
+                <label class="form-checkbox"><input type="checkbox" checked /> ShopeePay</label>
+                <label class="form-checkbox"><input type="checkbox" checked /> QRIS</label>
+                <label class="form-checkbox"><input type="checkbox" checked /> Credit Card</label>
+                <label class="form-checkbox"><input type="checkbox" /> Alfamart / Indomaret</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security -->
+        <div class="card" id="security">
+          <div class="card-body">
+            <h2 style="font-weight: 700; margin-bottom: 0.5rem;">Security</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Authentication & access control</p>
+
+            <div class="form-group">
+              <label class="form-checkbox">
+                <input type="checkbox" checked />
+                <div>
+                  <div style="font-weight: 500;">Require MFA for Admin</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Semua admin wajib enable 2FA (TOTP)</div>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox">
+                <input type="checkbox" checked />
+                <div>
+                  <div style="font-weight: 500;">MFA Re-challenge (Sensitive Actions)</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Payout approve > Rp 20jt butuh MFA ulang</div>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox">
+                <input type="checkbox" checked />
+                <div>
+                  <div style="font-weight: 500;">Session Auto-Logout</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Admin session expire setelah 8 jam idle</div>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox">
+                <input type="checkbox" checked />
+                <div>
+                  <div style="font-weight: 500;">Login Rate Limiting</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Max 5 attempts / 15 menit per IP</div>
+                </div>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox">
+                <input type="checkbox" />
+                <div>
+                  <div style="font-weight: 500;">Admin IP Whitelist</div>
+                  <div style="font-size: 0.8125rem; color: var(--text-tertiary);">Restrict admin login ke IP tertentu (Phase 2)</div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
