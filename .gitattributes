@@ -1,0 +1,42 @@
+# =============================================
+# Alnilam Frontend — Git Attributes
+# =============================================
+
+* text=auto eol=lf
+
+# Force LF
+*.sh          text eol=lf
+*.js          text eol=lf
+*.ts          text eol=lf
+*.vue         text eol=lf
+*.jsx         text eol=lf
+*.tsx         text eol=lf
+*.json        text eol=lf
+*.css         text eol=lf
+*.html        text eol=lf
+*.md          text eol=lf
+*.yaml        text eol=lf
+*.yml         text eol=lf
+
+# Force CRLF (Windows)
+*.ps1         text eol=crlf
+*.bat         text eol=crlf
+*.cmd         text eol=crlf
+
+# Binary — no normalization
+*.png         binary
+*.jpg         binary
+*.jpeg        binary
+*.gif         binary
+*.ico         binary
+*.webp        binary
+*.woff        binary
+*.woff2       binary
+*.ttf         binary
+
+# Diff hints
+*.md          diff=markdown
+
+# Export ignore
+/.github          export-ignore
+/tests            export-ignore
