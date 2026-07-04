@@ -1,48 +1,62 @@
 /* =============================================
-   Alnilam Theme — Dolby-Inspired Dark Premium
+   Alnilam Theme — Space / Cosmic Blue
+   Inspired by: Alnilam star (Orion's Belt)
+
+   Palette:
+   #0F2854 — Deep space navy (primary bg)
+   #1C4D8D — Medium blue (accent secondary)
+   #4988C4 — Light blue (accent mid)
+   #BDE8F5 — Sky/star cyan (accent primary)
    ============================================= */
 
 :root {
-  /* Colors */
-  --bg-primary:    #000000;
-  --bg-secondary:  #0A0A0A;
-  --bg-tertiary:   #141414;
-  --bg-elevated:   #1A1A1A;
-  --bg-card:       #0F0F0F;
+  /* Cosmic Background Scale */
+  --bg-primary:    #0A1B3D;    /* Deepest navy — void of space */
+  --bg-secondary:  #0F2854;    /* Deep space navy — primary bg */
+  --bg-tertiary:   #152E62;    /* Slightly lighter navy */
+  --bg-elevated:   #1C3E75;    /* Card elevated */
+  --bg-card:       #12305E;    /* Card default */
+  --bg-hover:      #1F468A;    /* Hover state */
 
+  /* Text — starlight */
   --text-primary:    #FFFFFF;
-  --text-secondary:  #A8A8A8;
-  --text-tertiary:   #6B6B6B;
-  --text-muted:      #4A4A4A;
+  --text-secondary:  #BDE8F5;  /* Sky cyan for secondary */
+  --text-tertiary:   #7FB4DA;
+  --text-muted:      #4988C4;
 
-  --border-subtle:   rgba(255, 255, 255, 0.08);
-  --border-default:  rgba(255, 255, 255, 0.12);
-  --border-strong:   rgba(255, 255, 255, 0.24);
-  --border-accent:   #C9A66B;
+  /* Borders — cosmic dust */
+  --border-subtle:   rgba(189, 232, 245, 0.08);
+  --border-default:  rgba(189, 232, 245, 0.15);
+  --border-strong:   rgba(189, 232, 245, 0.3);
+  --border-accent:   #4988C4;
 
-  /* Alnilam Brand — Gold Premium */
-  --accent-primary:   #C9A66B;    /* Muted gold - primary accent */
-  --accent-hover:     #DDBB7A;
-  --accent-glow:      rgba(201, 166, 107, 0.3);
-
-  /* Alt accent — Cyan (untuk tech feel) */
-  --accent-cyan:      #00D4FF;
-  --accent-cyan-glow: rgba(0, 212, 255, 0.2);
+  /* Accent — starlight */
+  --accent-primary:   #BDE8F5;   /* Sky cyan — main accent, like starlight */
+  --accent-hover:     #E5F5FB;   /* Brighter, like star flare */
+  --accent-glow:      rgba(189, 232, 245, 0.4);
+  --accent-mid:       #4988C4;   /* Medium blue */
+  --accent-deep:      #1C4D8D;   /* Deep blue */
 
   /* Status */
-  --success:  #10B981;
-  --warning:  #F59E0B;
-  --danger:   #EF4444;
+  --success:  #4ADE80;   /* Green — alien lifeform 👽 */
+  --warning:  #FBBF24;   /* Amber — planetary alert */
+  --danger:   #F87171;   /* Coral red — meteor warning */
 
   /* Typography */
-  --font-heading: 'Helvetica Neue', 'Inter', -apple-system, sans-serif;
-  --font-body:    'Helvetica Neue', 'Inter', -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+  --font-body:    'Inter', 'Helvetica Neue', -apple-system, sans-serif;
   --font-mono:    'JetBrains Mono', 'Consolas', monospace;
 
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 300ms ease;
   --transition-slow: 500ms ease;
+
+  /* Cosmic gradients */
+  --gradient-hero: radial-gradient(ellipse at 30% 20%, #1C4D8D 0%, #0F2854 45%, #0A1B3D 100%);
+  --gradient-card: linear-gradient(135deg, rgba(28, 77, 141, 0.4) 0%, rgba(15, 40, 84, 0.6) 100%);
+  --gradient-nebula: radial-gradient(circle at 70% 30%, rgba(73, 136, 196, 0.15) 0%, transparent 50%),
+                     radial-gradient(circle at 30% 70%, rgba(189, 232, 245, 0.08) 0%, transparent 50%);
 }
 
 /* =============================================
@@ -61,12 +75,24 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   overflow-x: hidden;
+
+  /* Subtle star field background */
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(189, 232, 245, 0.4), transparent),
+    radial-gradient(2px 2px at 80% 10%, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1px 1px at 90% 60%, rgba(189, 232, 245, 0.3), transparent),
+    radial-gradient(1px 1px at 33% 80%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 15% 15%, rgba(189, 232, 245, 0.35), transparent);
+  background-size: 300px 300px, 250px 250px, 400px 400px, 350px 350px, 280px 280px, 220px 220px, 380px 380px;
+  background-attachment: fixed;
 }
 
 a {
@@ -137,6 +163,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
 }
 
+/* Glowing accent text */
+.text-glow {
+  color: var(--accent-primary);
+  text-shadow: 0 0 20px rgba(189, 232, 245, 0.5);
+}
+
 /* =============================================
    Layout
    ============================================= */
@@ -155,10 +187,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   padding: 6rem 0;
+  position: relative;
 }
 
 .section-lg {
   padding: 8rem 0;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -184,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 100;
   padding: 1.25rem 2rem;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(15, 40, 84, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
@@ -206,19 +240,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 
 .nav-brand-logo {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-hover));
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  color: var(--bg-primary);
-  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(189, 232, 245, 0.4));
+}
+
+.nav-brand-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #BDE8F5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
 }
 
 .nav-menu {
@@ -248,6 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 0;
   height: 1px;
   background: var(--accent-primary);
+  box-shadow: 0 0 8px var(--accent-glow);
   transition: width var(--transition-base);
 }
 
@@ -272,7 +310,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   Buttons
+   Buttons — Cosmic style
    ============================================= */
 
 .btn {
@@ -288,17 +326,21 @@ h1, h2, h3, h4, h5, h6 {
   transition: all var(--transition-base);
   cursor: pointer;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
-  background: var(--text-primary);
+  background: var(--accent-primary);
   color: var(--bg-primary);
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--accent-primary);
+  box-shadow: 0 0 20px rgba(189, 232, 245, 0.3);
 }
 
 .btn-primary:hover {
-  background: transparent;
-  color: var(--text-primary);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 30px rgba(189, 232, 245, 0.6);
   transform: translateY(-1px);
 }
 
@@ -309,20 +351,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-  border-color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-primary);
+  background: rgba(189, 232, 245, 0.05);
+  color: var(--accent-primary);
 }
 
 .btn-accent {
-  background: var(--accent-primary);
+  background: linear-gradient(135deg, var(--accent-primary), #E5F5FB);
   color: var(--bg-primary);
   border: 1px solid var(--accent-primary);
+  box-shadow: 0 0 20px var(--accent-glow), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  font-weight: 700;
 }
 
 .btn-accent:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-  box-shadow: 0 0 30px var(--accent-glow);
+  box-shadow: 0 0 40px var(--accent-glow), inset 0 0 30px rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .btn-ghost {
@@ -360,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   Cards
+   Cards — Cosmic depth
    ============================================= */
 
 .card {
@@ -369,11 +413,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   overflow: hidden;
   transition: all var(--transition-base);
+  position: relative;
 }
 
 .card:hover {
   border-color: var(--border-default);
   transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card-elevated {
@@ -386,7 +432,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-interactive:hover {
   border-color: var(--accent-primary);
-  box-shadow: 0 0 40px rgba(201, 166, 107, 0.1);
+  box-shadow:
+    0 0 40px rgba(189, 232, 245, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .card-image {
@@ -422,7 +470,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   Badges & Tags
+   Badges — Star markers
    ============================================= */
 
 .badge {
@@ -441,27 +489,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .badge-accent {
-  background: transparent;
+  background: rgba(189, 232, 245, 0.1);
   color: var(--accent-primary);
   border-color: var(--accent-primary);
+  box-shadow: 0 0 10px rgba(189, 232, 245, 0.2);
 }
 
 .badge-success {
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(74, 222, 128, 0.1);
   color: var(--success);
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(74, 222, 128, 0.3);
 }
 
 .badge-warning {
-  background: rgba(245, 158, 11, 0.1);
+  background: rgba(251, 191, 36, 0.1);
   color: var(--warning);
-  border-color: rgba(245, 158, 11, 0.3);
+  border-color: rgba(251, 191, 36, 0.3);
 }
 
 .badge-danger {
-  background: rgba(239, 68, 68, 0.1);
+  background: rgba(248, 113, 113, 0.1);
   color: var(--danger);
-  border-color: rgba(239, 68, 68, 0.3);
+  border-color: rgba(248, 113, 113, 0.3);
 }
 
 /* =============================================
@@ -489,7 +538,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.875rem 1rem;
   font-size: 0.9375rem;
   color: var(--text-primary);
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border: 1px solid var(--border-default);
   border-radius: 4px;
   transition: all var(--transition-fast);
@@ -502,7 +551,7 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   border-color: var(--accent-primary);
   background: var(--bg-tertiary);
-  box-shadow: 0 0 0 3px var(--accent-glow);
+  box-shadow: 0 0 0 3px rgba(189, 232, 245, 0.15);
 }
 
 .form-input::placeholder,
@@ -512,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='%23A8A8A8'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='%23BDE8F5'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 2.5rem;
@@ -550,7 +599,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   Utilities
+   Layout Grid
    ============================================= */
 
 .grid {
@@ -589,12 +638,48 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
+/* =============================================
+   Hero — Space Journey
+   ============================================= */
+
 .hero {
   min-height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
+  background: var(--gradient-hero);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-nebula);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 15% 20%, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 25% 60%, rgba(189, 232, 245, 0.6), transparent),
+    radial-gradient(2px 2px at 45% 30%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 65% 70%, rgba(189, 232, 245, 0.5), transparent),
+    radial-gradient(2px 2px at 80% 15%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 90% 45%, rgba(189, 232, 245, 0.6), transparent),
+    radial-gradient(2px 2px at 35% 85%, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 200px 200px, 180px 180px, 250px 250px, 220px 220px, 300px 300px, 190px 190px, 260px 260px;
+  animation: starfield 60s linear infinite;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+@keyframes starfield {
+  from { background-position: 0 0; }
+  to { background-position: 200px 200px; }
 }
 
 .hero-bg {
@@ -607,7 +692,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
+  opacity: 0.15;
+  mix-blend-mode: screen;
 }
 
 .hero-gradient {
@@ -616,8 +702,8 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.95) 100%
+    rgba(15, 40, 84, 0.4) 50%,
+    rgba(15, 40, 84, 0.95) 100%
   );
   z-index: 1;
 }
@@ -626,6 +712,17 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   max-width: 900px;
+}
+
+/* Cosmic dust particles overlay */
+.cosmic-dust {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(73, 136, 196, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 80% 60%, rgba(189, 232, 245, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 50% 90%, rgba(28, 77, 141, 0.15) 0%, transparent 30%);
 }
 
 /* =============================================
@@ -637,12 +734,13 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--text-secondary);
+  color: var(--accent-primary);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   z-index: 3;
   animation: bounce 2s infinite;
+  text-shadow: 0 0 10px rgba(189, 232, 245, 0.5);
 }
 
 @keyframes bounce {
@@ -655,9 +753,22 @@ h1, h2, h3, h4, h5, h6 {
    ============================================= */
 
 .footer {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border-top: 1px solid var(--border-subtle);
   padding: 4rem 0 2rem;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  opacity: 0.4;
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 .footer-grid {
@@ -716,7 +827,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   Admin Panel Specific
+   Admin Panel — Mission Control
    ============================================= */
 
 .admin-layout {
@@ -726,7 +837,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border-right: 1px solid var(--border-subtle);
   padding: 2rem 1.25rem;
   position: sticky;
@@ -743,6 +854,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   margin-bottom: 2.5rem;
   padding: 0 0.5rem;
+}
+
+.sidebar-brand img {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 0 8px rgba(189, 232, 245, 0.4));
 }
 
 .sidebar-section {
@@ -797,17 +914,20 @@ h1, h2, h3, h4, h5, h6 {
   height: 20px;
   background: var(--accent-primary);
   border-radius: 0 3px 3px 0;
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .sidebar-icon {
   font-size: 1.125rem;
   width: 20px;
   text-align: center;
+  color: var(--accent-mid);
 }
 
 .main-content {
   padding: 2rem 2.5rem;
   overflow-x: auto;
+  background: var(--bg-secondary);
 }
 
 .main-header {
@@ -838,6 +958,19 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 6px;
   padding: 1.5rem;
   transition: border-color var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(189, 232, 245, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .kpi-card:hover {
@@ -893,7 +1026,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .table thead {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -967,27 +1100,41 @@ h1, h2, h3, h4, h5, h6 {
   animation: glow-pulse 3s ease-in-out infinite;
 }
 
+/* Twinkle animation for stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Orbit rotation for decorative elements */
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* =============================================
-   Category Icons
+   Category Icons — Cosmic style
    ============================================= */
 
 .category-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  background: rgba(201, 166, 107, 0.1);
+  border-radius: 12px;
+  background: rgba(189, 232, 245, 0.08);
   color: var(--accent-primary);
   margin-bottom: 1rem;
   transition: all var(--transition-base);
+  border: 1px solid rgba(189, 232, 245, 0.15);
 }
 
 .card:hover .category-icon {
   background: var(--accent-primary);
   color: var(--bg-primary);
   transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(189, 232, 245, 0.4);
 }
 
 /* =============================================
@@ -1005,8 +1152,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-card:hover {
-  border-color: var(--border-accent);
+  border-color: var(--accent-mid);
   transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(73, 136, 196, 0.15);
 }
 
 .product-card:hover .product-overlay {
@@ -1032,7 +1180,7 @@ h1, h2, h3, h4, h5, h6 {
 .product-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(180deg, transparent 40%, rgba(15, 40, 84, 0.8) 100%);
   opacity: 0;
   transition: opacity var(--transition-base);
 }
@@ -1113,7 +1261,7 @@ h1, h2, h3, h4, h5, h6 {
 .text-muted { color: var(--text-secondary); }
 .text-dim { color: var(--text-tertiary); }
 
-.bg-black { background: var(--bg-primary); }
+.bg-primary { background: var(--bg-primary); }
 .bg-card { background: var(--bg-card); }
 .bg-elevated { background: var(--bg-elevated); }
 
@@ -1138,10 +1286,10 @@ h1, h2, h3, h4, h5, h6 {
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
-/* Divider */
+/* Divider — cosmic line */
 .divider {
   height: 1px;
-  background: var(--border-subtle);
+  background: linear-gradient(90deg, transparent, var(--border-default), transparent);
   margin: 3rem 0;
 }
 
@@ -1157,4 +1305,60 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* =============================================
+   Space Theme Decorations
+   ============================================= */
+
+/* Constellation dots — optional decoration */
+.constellation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--accent-glow);
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.star.large {
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* Orbit decoration for hero */
+.orbit-decoration {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border: 1px solid rgba(189, 232, 245, 0.08);
+  border-radius: 50%;
+  top: 50%;
+  right: -400px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.orbit-decoration::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--accent-glow);
+  animation: orbit 30s linear infinite;
+  transform-origin: 406px 6px;
 }
