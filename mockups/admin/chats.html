@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chats — Alnilam Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/theme.css" />
+
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+  <div class="sidebar-brand"><img src="../assets/img/alnilam.png" alt="Alnilam" class="nav-brand-logo" /><div><div>ALNILAM</div><div style="font-size:.6875rem;color:var(--accent-primary);letter-spacing:.1em;text-transform:uppercase;font-weight:500;">Admin</div></div></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Overview</div><ul class="sidebar-nav">
+    <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">◈</span><span>Dashboard</span></a></li>
+    <li><a href="analytics.html" class="sidebar-link"><span class="sidebar-icon">◇</span><span>Analytics</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Marketplace</div><ul class="sidebar-nav">
+    <li><a href="products.html" class="sidebar-link"><span class="sidebar-icon">▤</span><span>Products</span></a></li>
+    <li><a href="categories.html" class="sidebar-link"><span class="sidebar-icon">▦</span><span>Categories</span></a></li>
+    <li><a href="orders.html" class="sidebar-link"><span class="sidebar-icon">▧</span><span>Orders <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">12</span></span></a></li>
+    <li><a href="projects.html" class="sidebar-link"><span class="sidebar-icon">◱</span><span>Projects</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Communication</div><ul class="sidebar-nav">
+    <li><a href="chats.html" class="sidebar-link active"><span class="sidebar-icon">✉</span><span>Chats <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">7</span></span></a></li>
+    <li><a href="meetings.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Video Meetings</span></a></li>
+    <li><a href="notifications.html" class="sidebar-link"><span class="sidebar-icon">✱</span><span>Notifications</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">People</div><ul class="sidebar-nav">
+    <li><a href="users.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Users</span></a></li>
+    <li><a href="creators.html" class="sidebar-link"><span class="sidebar-icon">◎</span><span>Creators</span></a></li>
+    <li><a href="kyc.html" class="sidebar-link"><span class="sidebar-icon">✎</span><span>KYC Queue <span class="badge badge-warning" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">3</span></span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Finance</div><ul class="sidebar-nav">
+    <li><a href="transactions.html" class="sidebar-link"><span class="sidebar-icon">◐</span><span>Transactions</span></a></li>
+    <li><a href="payouts.html" class="sidebar-link"><span class="sidebar-icon">◑</span><span>Payouts</span></a></li>
+    <li><a href="refunds.html" class="sidebar-link"><span class="sidebar-icon">◒</span><span>Refunds</span></a></li>
+    <li><a href="vouchers.html" class="sidebar-link"><span class="sidebar-icon">◓</span><span>Vouchers</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Moderation</div><ul class="sidebar-nav">
+    <li><a href="disputes.html" class="sidebar-link"><span class="sidebar-icon">⚠</span><span>Disputes <span class="badge badge-danger" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">2</span></span></a></li>
+    <li><a href="support.html" class="sidebar-link"><span class="sidebar-icon">♨</span><span>Support Tickets</span></a></li>
+    <li><a href="audit-log.html" class="sidebar-link"><span class="sidebar-icon">✪</span><span>Audit Log</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">System</div><ul class="sidebar-nav">
+    <li><a href="settings.html" class="sidebar-link"><span class="sidebar-icon">✧</span><span>Settings</span></a></li>
+  </ul></div>
+  <div style="margin-top:auto;padding-top:2rem;border-top:1px solid var(--border-subtle);"><div style="display:flex;align-items:center;gap:.75rem;padding:.75rem .875rem;"><div style="width:32px;height:32px;background:var(--accent-primary);color:var(--bg-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem;">A</div><div style="flex:1;"><div style="font-size:.875rem;font-weight:600;">Admin Alnilam</div><div style="font-size:.75rem;color:var(--text-tertiary);">Super Admin</div></div><a href="../login.html" style="color:var(--text-tertiary);"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></a></div></div>
+</aside>
+<main class="main-content">
+
+  <div class="main-header">
+    <div><div class="eyebrow mb-1">COMMUNICATION</div><h1>Chats Monitor</h1></div>
+    <div style="display:flex;gap:.5rem;">
+      <button class="btn btn-outline btn-sm">Filter</button>
+      <button class="btn btn-outline btn-sm">Broadcast</button>
+    </div>
+  </div>
+
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);">
+    <div class="kpi-card"><div class="kpi-label">Active Chats</div><div class="kpi-value">147</div><div class="kpi-change">↑ 12 new today</div></div>
+    <div class="kpi-card"><div class="kpi-label">Unread (Admin)</div><div class="kpi-value" style="color:#F59E0B;">7</div><div class="kpi-change">Requires attention</div></div>
+    <div class="kpi-card"><div class="kpi-label">Avg. Response Time</div><div class="kpi-value">42m</div><div class="kpi-change">↓ 8% vs last week</div></div>
+    <div class="kpi-card"><div class="kpi-label">Flagged Conversations</div><div class="kpi-value" style="color:var(--danger);">3</div><div class="kpi-change">Auto-detected</div></div>
+  </div>
+
+  <div class="card">
+    <div style="padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);display:flex;gap:.75rem;flex-wrap:wrap;">
+      <button class="btn btn-outline btn-sm" style="background:var(--accent-primary);color:white;">All (147)</button>
+      <button class="btn btn-ghost btn-sm">Unread (7)</button>
+      <button class="btn btn-ghost btn-sm">Flagged (3)</button>
+      <button class="btn btn-ghost btn-sm">Admin-joined (5)</button>
+      <button class="btn btn-ghost btn-sm">Idle &gt; 3d (12)</button>
+      <input type="search" placeholder="Search chat, user, project..." class="form-input" style="margin-left:auto;width:280px;font-size:.875rem;padding:.5rem .75rem;" />
+    </div>
+
+    <div>
+      <a href="chat-room.html" style="display:flex;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);text-decoration:none;color:inherit;gap:1rem;">
+        <div style="display:flex;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;">D</div>
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:-12px;border:2px solid white;">R</div>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;">
+            <div style="display:flex;gap:.5rem;align-items:center;"><span style="font-weight:700;">Diana BM ↔ Rifqi H.</span><span style="font-family:monospace;font-size:.6875rem;color:var(--text-tertiary);">#ORD-0847</span></div>
+            <span style="font-size:.75rem;color:var(--text-tertiary);">2m ago</span>
+          </div>
+          <div style="font-size:.875rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Terima kasih, saya tunggu revisi batch 3-nya ya</div>
+        </div>
+        <span style="min-width:22px;height:22px;padding:0 6px;background:var(--accent-primary);color:white;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:.6875rem;font-weight:800;">3</span>
+      </a><a href="chat-room.html" style="display:flex;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);text-decoration:none;color:inherit;gap:1rem;background:#FEF2F2;">
+        <div style="display:flex;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;">H</div>
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:-12px;border:2px solid white;">F</div>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;">
+            <div style="display:flex;gap:.5rem;align-items:center;"><span style="font-weight:700;">Haus Coffee ↔ Fajar N.</span><span style="font-family:monospace;font-size:.6875rem;color:var(--text-tertiary);">#ORD-0841</span><span class="badge badge-danger" style="font-size:.6875rem;">FLAGGED</span></div>
+            <span style="font-size:.75rem;color:var(--text-tertiary);">15m ago</span>
+          </div>
+          <div style="font-size:.875rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Kapan bisa selesai kak?</div>
+        </div>
+        <span style="min-width:22px;height:22px;padding:0 6px;background:var(--accent-primary);color:white;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:.6875rem;font-weight:800;">1</span>
+      </a><a href="chat-room.html" style="display:flex;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);text-decoration:none;color:inherit;gap:1rem;">
+        <div style="display:flex;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;">P</div>
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:-12px;border:2px solid white;">A</div>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;">
+            <div style="display:flex;gap:.5rem;align-items:center;"><span style="font-weight:700;">PT Wardah ↔ Amira S.</span><span style="font-family:monospace;font-size:.6875rem;color:var(--text-tertiary);">#ORD-0846</span></div>
+            <span style="font-size:.75rem;color:var(--text-tertiary);">1h ago</span>
+          </div>
+          <div style="font-size:.875rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">File final sudah saya kirim via drive</div>
+        </div>
+        
+      </a><a href="chat-room.html" style="display:flex;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);text-decoration:none;color:inherit;gap:1rem;">
+        <div style="display:flex;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;">A</div>
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:-12px;border:2px solid white;">A</div>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;">
+            <div style="display:flex;gap:.5rem;align-items:center;"><span style="font-weight:700;">Andi Setiawan ↔ Anisa F.</span><span style="font-family:monospace;font-size:.6875rem;color:var(--text-tertiary);">#ORD-0845</span></div>
+            <span style="font-size:.75rem;color:var(--text-tertiary);">2h ago</span>
+          </div>
+          <div style="font-size:.875rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Boleh minta preview dulu?</div>
+        </div>
+        <span style="min-width:22px;height:22px;padding:0 6px;background:var(--accent-primary);color:white;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:.6875rem;font-weight:800;">2</span>
+      </a><a href="chat-room.html" style="display:flex;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);text-decoration:none;color:inherit;gap:1rem;">
+        <div style="display:flex;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;">K</div>
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:-12px;border:2px solid white;">K</div>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;">
+            <div style="display:flex;gap:.5rem;align-items:center;"><span style="font-weight:700;">Kopi Kenangan ↔ Kayla R.</span><span style="font-family:monospace;font-size:.6875rem;color:var(--text-tertiary);">#ORD-0842</span></div>
+            <span style="font-size:.75rem;color:var(--text-tertiary);">5h ago</span>
+          </div>
+          <div style="font-size:.875rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Session live sudah selesai 🎉</div>
+        </div>
+        
+      </a><a href="chat-room.html" style="display:flex;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);text-decoration:none;color:inherit;gap:1rem;">
+        <div style="display:flex;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;">M</div>
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:-12px;border:2px solid white;">B</div>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;">
+            <div style="display:flex;gap:.5rem;align-items:center;"><span style="font-weight:700;">MS Glow ↔ Bagas P.</span><span style="font-family:monospace;font-size:.6875rem;color:var(--text-tertiary);">#ORD-0844</span></div>
+            <span style="font-size:.75rem;color:var(--text-tertiary);">Yesterday</span>
+          </div>
+          <div style="font-size:.875rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">SEO audit report attached</div>
+        </div>
+        
+      </a><a href="chat-room.html" style="display:flex;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);text-decoration:none;color:inherit;gap:1rem;background:#FEF2F2;">
+        <div style="display:flex;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-primary);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;">E</div>
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-left:-12px;border:2px solid white;">R</div>
+        </div>
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.25rem;">
+            <div style="display:flex;gap:.5rem;align-items:center;"><span style="font-weight:700;">Erigo ↔ Rifqi H.</span><span style="font-family:monospace;font-size:.6875rem;color:var(--text-tertiary);">#ORD-0839</span><span class="badge badge-danger" style="font-size:.6875rem;">FLAGGED</span></div>
+            <span style="font-size:.75rem;color:var(--text-tertiary);">2 days ago</span>
+          </div>
+          <div style="font-size:.875rem;color:var(--text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Refund request submitted</div>
+        </div>
+        <span style="min-width:22px;height:22px;padding:0 6px;background:var(--accent-primary);color:white;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:.6875rem;font-weight:800;">1</span>
+      </a>
+    </div>
+  </div>
+
+</main>
+</div>
+</body>
+</html>

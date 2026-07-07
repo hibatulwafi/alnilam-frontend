@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video Meetings — Alnilam Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/theme.css" />
+
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+  <div class="sidebar-brand"><img src="../assets/img/alnilam.png" alt="Alnilam" class="nav-brand-logo" /><div><div>ALNILAM</div><div style="font-size:.6875rem;color:var(--accent-primary);letter-spacing:.1em;text-transform:uppercase;font-weight:500;">Admin</div></div></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Overview</div><ul class="sidebar-nav">
+    <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">◈</span><span>Dashboard</span></a></li>
+    <li><a href="analytics.html" class="sidebar-link"><span class="sidebar-icon">◇</span><span>Analytics</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Marketplace</div><ul class="sidebar-nav">
+    <li><a href="products.html" class="sidebar-link"><span class="sidebar-icon">▤</span><span>Products</span></a></li>
+    <li><a href="categories.html" class="sidebar-link"><span class="sidebar-icon">▦</span><span>Categories</span></a></li>
+    <li><a href="orders.html" class="sidebar-link"><span class="sidebar-icon">▧</span><span>Orders <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">12</span></span></a></li>
+    <li><a href="projects.html" class="sidebar-link"><span class="sidebar-icon">◱</span><span>Projects</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Communication</div><ul class="sidebar-nav">
+    <li><a href="chats.html" class="sidebar-link"><span class="sidebar-icon">✉</span><span>Chats <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">7</span></span></a></li>
+    <li><a href="meetings.html" class="sidebar-link active"><span class="sidebar-icon">◉</span><span>Video Meetings</span></a></li>
+    <li><a href="notifications.html" class="sidebar-link"><span class="sidebar-icon">✱</span><span>Notifications</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">People</div><ul class="sidebar-nav">
+    <li><a href="users.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Users</span></a></li>
+    <li><a href="creators.html" class="sidebar-link"><span class="sidebar-icon">◎</span><span>Creators</span></a></li>
+    <li><a href="kyc.html" class="sidebar-link"><span class="sidebar-icon">✎</span><span>KYC Queue <span class="badge badge-warning" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">3</span></span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Finance</div><ul class="sidebar-nav">
+    <li><a href="transactions.html" class="sidebar-link"><span class="sidebar-icon">◐</span><span>Transactions</span></a></li>
+    <li><a href="payouts.html" class="sidebar-link"><span class="sidebar-icon">◑</span><span>Payouts</span></a></li>
+    <li><a href="refunds.html" class="sidebar-link"><span class="sidebar-icon">◒</span><span>Refunds</span></a></li>
+    <li><a href="vouchers.html" class="sidebar-link"><span class="sidebar-icon">◓</span><span>Vouchers</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Moderation</div><ul class="sidebar-nav">
+    <li><a href="disputes.html" class="sidebar-link"><span class="sidebar-icon">⚠</span><span>Disputes <span class="badge badge-danger" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">2</span></span></a></li>
+    <li><a href="support.html" class="sidebar-link"><span class="sidebar-icon">♨</span><span>Support Tickets</span></a></li>
+    <li><a href="audit-log.html" class="sidebar-link"><span class="sidebar-icon">✪</span><span>Audit Log</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">System</div><ul class="sidebar-nav">
+    <li><a href="settings.html" class="sidebar-link"><span class="sidebar-icon">✧</span><span>Settings</span></a></li>
+  </ul></div>
+  <div style="margin-top:auto;padding-top:2rem;border-top:1px solid var(--border-subtle);"><div style="display:flex;align-items:center;gap:.75rem;padding:.75rem .875rem;"><div style="width:32px;height:32px;background:var(--accent-primary);color:var(--bg-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem;">A</div><div style="flex:1;"><div style="font-size:.875rem;font-weight:600;">Admin Alnilam</div><div style="font-size:.75rem;color:var(--text-tertiary);">Super Admin</div></div><a href="../login.html" style="color:var(--text-tertiary);"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></a></div></div>
+</aside>
+<main class="main-content">
+
+  <div class="main-header">
+    <div><div class="eyebrow mb-1">COMMUNICATION</div><h1>Video Meetings</h1></div>
+    <button class="btn btn-accent btn-sm">+ Schedule Meeting</button>
+  </div>
+
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);">
+    <div class="kpi-card"><div class="kpi-label">Meetings Today</div><div class="kpi-value">12</div><div class="kpi-change">3 upcoming, 9 done</div></div>
+    <div class="kpi-card"><div class="kpi-label">Live Now</div><div class="kpi-value" style="color:var(--danger);">◉ 2</div><div class="kpi-change">Real-time monitoring</div></div>
+    <div class="kpi-card"><div class="kpi-label">Total This Month</div><div class="kpi-value">247</div><div class="kpi-change">Avg 42 min/session</div></div>
+    <div class="kpi-card"><div class="kpi-label">Server Load</div><div class="kpi-value" style="color:var(--success);">14%</div><div class="kpi-change">WebRTC · healthy</div></div>
+  </div>
+
+  <!-- Live meetings -->
+  <div class="card mb-4" style="border-color:var(--danger);">
+    <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-subtle);background:#FEF2F2;display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;gap:.75rem;align-items:center;"><span style="width:10px;height:10px;background:var(--danger);border-radius:50%;animation:pulse 1.5s infinite;"></span><h3 style="font-weight:800;color:var(--danger);">LIVE NOW · 2 meetings</h3></div>
+      <button class="btn btn-outline btn-sm" style="color:var(--danger);border-color:var(--danger);">Join as Admin (silent)</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <div style="padding:1.25rem 1.5rem;border-right:1px solid var(--border-subtle);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem;">
+          <div><div style="font-family:monospace;font-size:.75rem;color:var(--accent-primary);font-weight:700;">#ORD-0846</div><div style="font-weight:700;margin-top:.125rem;">Kick-off Meeting Amira</div></div>
+          <span class="badge badge-danger">● LIVE</span>
+        </div>
+        <div style="font-size:.8125rem;color:var(--text-secondary);margin-bottom:.75rem;">PT Wardah × Amira Salsabila</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:.75rem;border-top:1px solid var(--border-subtle);"><span style="font-size:.75rem;color:var(--text-tertiary);">Started 32m ago · Duration 12:32</span><a href="meeting-room.html" class="btn btn-outline btn-sm">Monitor →</a></div>
+      </div><div style="padding:1.25rem 1.5rem;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem;">
+          <div><div style="font-family:monospace;font-size:.75rem;color:var(--accent-primary);font-weight:700;">#ORD-0844</div><div style="font-weight:700;margin-top:.125rem;">Strategy Q3 Review</div></div>
+          <span class="badge badge-danger">● LIVE</span>
+        </div>
+        <div style="font-size:.8125rem;color:var(--text-secondary);margin-bottom:.75rem;">MS Glow × Bagas Prakoso</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:.75rem;border-top:1px solid var(--border-subtle);"><span style="font-size:.75rem;color:var(--text-tertiary);">Started 11m ago · Duration 04:11</span><a href="meeting-room.html" class="btn btn-outline btn-sm">Monitor →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meetings list -->
+  <div class="card">
+    <div style="padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);display:flex;gap:.75rem;flex-wrap:wrap;">
+      <button class="btn btn-outline btn-sm" style="background:var(--accent-primary);color:white;">All</button>
+      <button class="btn btn-ghost btn-sm">Upcoming</button>
+      <button class="btn btn-ghost btn-sm">Completed</button>
+      <button class="btn btn-ghost btn-sm">Recorded (128)</button>
+      <button class="btn btn-ghost btn-sm">Cancelled</button>
+      <input type="search" placeholder="Search meeting..." class="form-input" style="margin-left:auto;width:250px;font-size:.875rem;padding:.5rem .75rem;" />
+    </div>
+
+    <table style="width:100%;font-size:.875rem;">
+      <thead><tr style="background:var(--bg-secondary);">
+        <th style="text-align:left;padding:.75rem 1.5rem;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);">Meeting</th>
+        <th style="text-align:left;padding:.75rem;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);">Order</th>
+        <th style="text-align:left;padding:.75rem;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);">Participants</th>
+        <th style="text-align:right;padding:.75rem;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);">Schedule</th>
+        <th style="text-align:right;padding:.75rem;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);">Duration</th>
+        <th style="padding:.75rem;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);">Status</th>
+        <th style="text-align:right;padding:.75rem 1.5rem;font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);">Action</th>
+      </tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--border-subtle);">
+          <td style="padding:.875rem 1.5rem;font-weight:600;">Kick-off Meeting Amira</td>
+          <td style="padding:.875rem;"><a href="order-detail.html" style="font-family:monospace;font-size:.75rem;color:var(--accent-primary);text-decoration:none;">#ORD-0846</a></td>
+          <td style="padding:.875rem;color:var(--text-secondary);">PT Wardah, Amira S.</td>
+          <td style="padding:.875rem;text-align:right;">Today 15:00</td>
+          <td style="padding:.875rem;text-align:right;color:var(--text-tertiary);">32m</td>
+          <td style="padding:.875rem;text-align:center;"><span class="badge badge-danger">LIVE</span></td>
+          <td style="padding:.875rem 1.5rem;text-align:right;"><a href="meeting-room.html" class="btn btn-ghost btn-sm">Monitor</a></td>
+        </tr><tr style="border-bottom:1px solid var(--border-subtle);">
+          <td style="padding:.875rem 1.5rem;font-weight:600;">Revision Discussion</td>
+          <td style="padding:.875rem;"><a href="order-detail.html" style="font-family:monospace;font-size:.75rem;color:var(--accent-primary);text-decoration:none;">#ORD-0847</a></td>
+          <td style="padding:.875rem;color:var(--text-secondary);">Diana BM, Rifqi H.</td>
+          <td style="padding:.875rem;text-align:right;">Tomorrow 10:00</td>
+          <td style="padding:.875rem;text-align:right;color:var(--text-tertiary);">—</td>
+          <td style="padding:.875rem;text-align:center;"><span class="badge badge-warning">SCHEDULED</span></td>
+          <td style="padding:.875rem 1.5rem;text-align:right;"><a href="meeting-room.html" class="btn btn-ghost btn-sm">Join</a></td>
+        </tr><tr style="border-bottom:1px solid var(--border-subtle);">
+          <td style="padding:.875rem 1.5rem;font-weight:600;">Final Preview Session</td>
+          <td style="padding:.875rem;"><a href="order-detail.html" style="font-family:monospace;font-size:.75rem;color:var(--accent-primary);text-decoration:none;">#ORD-0843</a></td>
+          <td style="padding:.875rem;color:var(--text-secondary);">Erigo, Rifqi H.</td>
+          <td style="padding:.875rem;text-align:right;">Today 09:00</td>
+          <td style="padding:.875rem;text-align:right;color:var(--text-tertiary);">48m</td>
+          <td style="padding:.875rem;text-align:center;"><span class="badge badge-success">COMPLETED</span></td>
+          <td style="padding:.875rem 1.5rem;text-align:right;"><a href="meeting-room.html" class="btn btn-ghost btn-sm">Recording</a></td>
+        </tr><tr style="border-bottom:1px solid var(--border-subtle);">
+          <td style="padding:.875rem 1.5rem;font-weight:600;">Strategy Bulan Ini</td>
+          <td style="padding:.875rem;"><a href="order-detail.html" style="font-family:monospace;font-size:.75rem;color:var(--accent-primary);text-decoration:none;">#ORD-0844</a></td>
+          <td style="padding:.875rem;color:var(--text-secondary);">MS Glow, Bagas P.</td>
+          <td style="padding:.875rem;text-align:right;">Yesterday 14:00</td>
+          <td style="padding:.875rem;text-align:right;color:var(--text-tertiary);">1h 12m</td>
+          <td style="padding:.875rem;text-align:center;"><span class="badge badge-success">COMPLETED · Recorded</span></td>
+          <td style="padding:.875rem 1.5rem;text-align:right;"><a href="meeting-room.html" class="btn btn-ghost btn-sm">Recording</a></td>
+        </tr><tr style="border-bottom:1px solid var(--border-subtle);">
+          <td style="padding:.875rem 1.5rem;font-weight:600;">Onboarding Session</td>
+          <td style="padding:.875rem;"><a href="order-detail.html" style="font-family:monospace;font-size:.75rem;color:var(--accent-primary);text-decoration:none;">#ORD-0821</a></td>
+          <td style="padding:.875rem;color:var(--text-secondary);">Andi S., Anisa F.</td>
+          <td style="padding:.875rem;text-align:right;">2 days ago</td>
+          <td style="padding:.875rem;text-align:right;color:var(--text-tertiary);">25m</td>
+          <td style="padding:.875rem;text-align:center;"><span class="badge badge-success">COMPLETED</span></td>
+          <td style="padding:.875rem 1.5rem;text-align:right;"><a href="meeting-room.html" class="btn btn-ghost btn-sm">Recording</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .5; transform: scale(1.2); }
+    }
+  </style>
+
+</main>
+</div>
+</body>
+</html>

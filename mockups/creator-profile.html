@@ -20,9 +20,10 @@
     <div class="nav-menu">
       <a href="index.html" class="nav-link">Home</a>
       <a href="catalog.html" class="nav-link">Katalog</a>
-      <a href="creator-profile.html" class="nav-link active">Creators</a>
-      <a href="#" class="nav-link">About</a>
-      <a href="#" class="nav-link">Blog</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="creators.html" class="nav-link active">Creators</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="blog.html" class="nav-link">Blog</a>
     </div>
     <div class="nav-actions">
       <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
@@ -34,6 +35,13 @@
 <!-- Header -->
 <section style="padding-top: 8rem;">
   <div class="container">
+    <!-- Breadcrumb -->
+    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--text-tertiary);">
+      <a href="creators.html" style="color: var(--accent-primary); text-decoration: none;">← Semua Creators</a>
+      <span>·</span>
+      <span>Rifqi Handoko</span>
+    </div>
+
     <div style="display: grid; grid-template-columns: 200px 1fr auto; gap: 3rem; align-items: center;">
       <div style="position: relative;">
         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-primary);" />
@@ -52,11 +60,22 @@
         <div style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 1rem;">
           Videographer & Motion Designer · Bandung, Indonesia
         </div>
-        <div style="display: flex; gap: 2rem; color: var(--text-tertiary); font-size: 0.9375rem;">
+        <div style="display: flex; gap: 2rem; color: var(--text-tertiary); font-size: 0.9375rem; margin-bottom: 1rem;">
           <span><strong style="color: var(--accent-primary);">★ 4.9</strong> (128 reviews)</span>
           <span><strong style="color: var(--text-primary);">127</strong> completed projects</span>
           <span><strong style="color: var(--text-primary);">Member</strong> sejak 2023</span>
           <span><strong style="color: var(--success);">●</strong> Response < 1 hour</span>
+        </div>
+
+        <!-- Tier expertise -->
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 0.75rem; color: var(--text-tertiary); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;">Handle Tier:</span>
+          <div style="display: flex; gap: 0.375rem;">
+            <span style="padding: 0.25rem 0.625rem; background: #EDE9FE; color: #7C3AED; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">⚛ Atom</span>
+            <span style="padding: 0.25rem 0.625rem; background: #D1FAE5; color: #059669; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">◐ Sphere</span>
+            <span style="padding: 0.25rem 0.625rem; background: var(--accent-highlight); color: var(--accent-primary); font-size: 0.75rem; font-weight: 700; border-radius: 6px;">★ Epsilon</span>
+            <span style="padding: 0.25rem 0.625rem; background: #FEE2E2; color: #DC2626; font-size: 0.75rem; font-weight: 700; border-radius: 6px;">✦ Supernova</span>
+          </div>
         </div>
       </div>
 
@@ -212,65 +231,227 @@
           <button class="btn btn-outline mt-3" style="width: 100%;">View all portfolio (28)</button>
         </div>
 
-        <!-- Services offered -->
+        <!-- Services / Products handled -->
         <div class="mb-5">
-          <h2 class="heading-1 mb-3">Services Offered (4)</h2>
-          <div class="grid grid-cols-2" style="gap: 1rem;">
-            <a href="product-detail.html" class="card card-interactive">
-              <div class="card-body">
-                <div class="product-category" style="margin-bottom: 0.5rem;">VIDEO PRODUCTION</div>
-                <h3 class="card-title">Product Video 30 Detik Cinematic</h3>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem;">
-                  <div>
-                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Starting from</div>
-                    <div style="font-size: 1.125rem; font-weight: 700;">Rp 3.500.000</div>
-                  </div>
-                  <span class="text-accent">→</span>
-                </div>
-              </div>
-            </a>
+          <div class="flex-between mb-2">
+            <h2 class="heading-1">Layanan yang di-handle <span style="color: var(--text-tertiary); font-weight: 500;">(12)</span></h2>
+            <a href="pricing.html" style="font-size: 0.875rem; color: var(--accent-primary); font-weight: 600;">Lihat semua pricing →</a>
+          </div>
 
-            <a href="product-detail.html" class="card card-interactive">
-              <div class="card-body">
-                <div class="product-category" style="margin-bottom: 0.5rem;">VIDEO PRODUCTION</div>
-                <h3 class="card-title">Company Profile Video Premium</h3>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem;">
-                  <div>
-                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Starting from</div>
-                    <div style="font-size: 1.125rem; font-weight: 700;">Rp 12.500.000</div>
-                  </div>
-                  <span class="text-accent">→</span>
-                </div>
-              </div>
-            </a>
+          <!-- Uniform pricing banner -->
+          <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1rem; background: var(--accent-highlight); border-radius: 8px; margin-bottom: 1.5rem;">
+            <svg width="18" height="18" fill="none" stroke="var(--accent-primary)" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink: 0;">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4M12 16h.01"/>
+            </svg>
+            <div style="font-size: 0.8125rem; color: var(--text-primary); line-height: 1.5;">
+              <strong>Harga di-set platform</strong> — sama untuk semua creator. Kamu memilih Rifqi karena <em>skill & portfolio</em>-nya, bukan karena harga.
+            </div>
+          </div>
 
-            <a href="product-detail.html" class="card card-interactive">
-              <div class="card-body">
-                <div class="product-category" style="margin-bottom: 0.5rem;">VIDEO PRODUCTION</div>
-                <h3 class="card-title">TikTok Ad Video Vertical</h3>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem;">
-                  <div>
-                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Starting from</div>
-                    <div style="font-size: 1.125rem; font-weight: 700;">Rp 2.200.000</div>
-                  </div>
-                  <span class="text-accent">→</span>
-                </div>
-              </div>
-            </a>
+          <style>
+            .tier-service-group { margin-bottom: 2rem; }
+            .tier-service-heading {
+              display: flex;
+              align-items: center;
+              gap: 0.625rem;
+              margin-bottom: 1rem;
+              padding-bottom: 0.5rem;
+              border-bottom: 2px solid;
+            }
+            .tier-service-heading.atom { border-color: #EDE9FE; }
+            .tier-service-heading.sphere { border-color: #D1FAE5; }
+            .tier-service-heading.epsilon { border-color: var(--accent-highlight); }
+            .tier-service-heading.supernova { border-color: #FEE2E2; }
+            .tier-service-heading h3 {
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: var(--text-primary);
+            }
+            .tier-service-heading .tier-tag {
+              padding: 0.25rem 0.625rem;
+              border-radius: 6px;
+              font-size: 0.6875rem;
+              font-weight: 700;
+              letter-spacing: 0.05em;
+            }
+            .tier-tag.atom { background: #EDE9FE; color: #7C3AED; }
+            .tier-tag.sphere { background: #D1FAE5; color: #059669; }
+            .tier-tag.epsilon { background: var(--accent-highlight); color: var(--accent-primary); }
+            .tier-tag.supernova { background: #FEE2E2; color: #DC2626; }
+            .service-list {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0.75rem;
+            }
+            .service-row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0.875rem 1rem;
+              background: white;
+              border: 1px solid var(--border-subtle);
+              border-radius: 8px;
+              text-decoration: none;
+              color: inherit;
+              transition: all 0.15s ease;
+            }
+            .service-row:hover {
+              border-color: var(--accent-primary);
+              background: var(--bg-secondary);
+            }
+            .service-row-info { flex: 1; min-width: 0; }
+            .service-row-name {
+              font-size: 0.9375rem;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 0.125rem;
+            }
+            .service-row-meta {
+              font-size: 0.75rem;
+              color: var(--text-tertiary);
+            }
+            .service-row-price {
+              font-size: 0.9375rem;
+              font-weight: 700;
+              color: var(--accent-primary);
+              white-space: nowrap;
+              margin-left: 1rem;
+            }
+            .service-row-price small {
+              display: block;
+              font-size: 0.6875rem;
+              color: var(--text-tertiary);
+              font-weight: 500;
+            }
+          </style>
 
-            <a href="product-detail.html" class="card card-interactive">
-              <div class="card-body">
-                <div class="product-category" style="margin-bottom: 0.5rem;">VIDEO PRODUCTION</div>
-                <h3 class="card-title">Music Video Production</h3>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem;">
-                  <div>
-                    <div style="font-size: 0.75rem; color: var(--text-tertiary);">Starting from</div>
-                    <div style="font-size: 1.125rem; font-weight: 700;">Rp 15.000.000</div>
-                  </div>
-                  <span class="text-accent">→</span>
+          <!-- Atom -->
+          <div class="tier-service-group">
+            <div class="tier-service-heading atom">
+              <span class="tier-tag atom">⚛ ATOM</span>
+              <h3>One-time Starter</h3>
+              <span style="font-size: 0.75rem; color: var(--text-tertiary); margin-left: auto;">3 layanan</span>
+            </div>
+            <div class="service-list">
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Atom Electron</div>
+                  <div class="service-row-meta">2 konten · 1 revisi · 3 hari</div>
                 </div>
-              </div>
-            </a>
+                <div class="service-row-price">Rp 299rb<small>fixed price</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Atom Neutron <span style="color: #F59E0B; font-size: 0.6875rem;">★ Popular</span></div>
+                  <div class="service-row-meta">8 design + 2 reels · 7 hari</div>
+                </div>
+                <div class="service-row-price">Rp 799rb<small>fixed price</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Atom Proton</div>
+                  <div class="service-row-meta">20 design + 5 reels · 14 hari</div>
+                </div>
+                <div class="service-row-price">Rp 1,999K<small>fixed price</small></div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Sphere (selected items handled by Rifqi) -->
+          <div class="tier-service-group">
+            <div class="tier-service-heading sphere">
+              <span class="tier-tag sphere">◐ SPHERE</span>
+              <h3>Print & Branding (à la carte)</h3>
+              <span style="font-size: 0.75rem; color: var(--text-tertiary); margin-left: auto;">4 dari 12 item</span>
+            </div>
+            <div class="service-list">
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Company Profile</div>
+                  <div class="service-row-meta">12-20 hal · premium · 14 hari</div>
+                </div>
+                <div class="service-row-price">Rp 999rb<small>fixed price</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Sales Deck</div>
+                  <div class="service-row-meta">15-25 slides · 10 hari</div>
+                </div>
+                <div class="service-row-price">Rp 1,199K<small>fixed price</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Brand Foundation</div>
+                  <div class="service-row-meta">Logo + Guidelines 15+ hal</div>
+                </div>
+                <div class="service-row-price">Rp 2,499K<small>fixed price</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Packaging Pro</div>
+                  <div class="service-row-meta">Dieline + 3D mockup</div>
+                </div>
+                <div class="service-row-price">Rp 1,499K<small>fixed price</small></div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Epsilon -->
+          <div class="tier-service-group">
+            <div class="tier-service-heading epsilon">
+              <span class="tier-tag epsilon">★ EPSILON</span>
+              <h3>Monthly Retainer (Signature)</h3>
+              <span style="font-size: 0.75rem; color: var(--text-tertiary); margin-left: auto;">3 layanan</span>
+            </div>
+            <div class="service-list">
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Epsilon Essentials</div>
+                  <div class="service-row-meta">15 design + 3 reels/bln · min 3 bln</div>
+                </div>
+                <div class="service-row-price">Rp 2,999K<small>/ bulan</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Epsilon Standard <span style="color: #F59E0B; font-size: 0.6875rem;">★ Popular</span></div>
+                  <div class="service-row-meta">25 design + 6 reels/bln · min 3 bln</div>
+                </div>
+                <div class="service-row-price">Rp 4,999K<small>/ bulan</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Epsilon Orionis</div>
+                  <div class="service-row-meta">45 design + 10 reels + Full Strategy</div>
+                </div>
+                <div class="service-row-price">Rp 7,999K<small>/ bulan</small></div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Supernova -->
+          <div class="tier-service-group">
+            <div class="tier-service-heading supernova">
+              <span class="tier-tag supernova">✦ SUPERNOVA</span>
+              <h3>Enterprise Retainer</h3>
+              <span style="font-size: 0.75rem; color: var(--text-tertiary); margin-left: auto;">2 layanan</span>
+            </div>
+            <div class="service-list">
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Supernova Gamma</div>
+                  <div class="service-row-meta">50 design + SEO Basic · min 6 bln</div>
+                </div>
+                <div class="service-row-price">Rp 14,999K<small>/ bulan</small></div>
+              </a>
+              <a href="product-detail.html" class="service-row">
+                <div class="service-row-info">
+                  <div class="service-row-name">Supernova Giant</div>
+                  <div class="service-row-meta">80 design + SEO Optimization</div>
+                </div>
+                <div class="service-row-price">Rp 29,999K<small>/ bulan</small></div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

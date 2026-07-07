@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Alnilam</title>
+  <meta name="description" content="Pilih paket sesuai skala bisnis Anda. Atom untuk konten, Sphere untuk brand collateral, Epsilon untuk social growth, Supernova untuk full ecosystem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+  <style>
+    /* Pricing Hero */
+    .pricing-hero {
+      padding: 10rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(189, 232, 245, 0.25) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .pricing-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Tier Overview */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .tier-card {
+      background: white;
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tier-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--accent-primary);
+    }
+
+    .tier-card.featured {
+      background: linear-gradient(180deg, var(--bg-navy) 0%, #0A1B3D 100%);
+      color: white;
+      border-color: var(--accent-primary);
+    }
+
+    .tier-card.featured::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(189, 232, 245, 0.15) 1px, transparent 0);
+      background-size: 24px 24px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .tier-card.featured > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tier-card.featured h3,
+    .tier-card.featured .tier-price {
+      color: white;
+    }
+
+    .tier-badge-popular {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent-highlight);
+      color: var(--accent-hover);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.625rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+
+    .tier-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background: var(--bg-secondary);
+      color: var(--accent-primary);
+    }
+
+    .tier-card.featured .tier-icon {
+      background: rgba(189, 232, 245, 0.15);
+      color: var(--accent-highlight);
+    }
+
+    .tier-eyebrow {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .tier-card.featured .tier-eyebrow {
+      color: var(--accent-highlight);
+    }
+
+    .tier-name {
+      font-size: 1.75rem;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .tier-desc {
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      min-height: 42px;
+    }
+
+    .tier-card.featured .tier-desc {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .tier-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+      font-family: var(--font-heading);
+    }
+
+    .tier-price-suffix {
+      font-size: 0.8125rem;
+      color: var(--text-tertiary);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .tier-card.featured .tier-price-suffix {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Package cards (Atom, Epsilon, Supernova detail) */
+    .package-section {
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    .package-section-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .package-section-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--bg-secondary);
+      color: var(--accent-primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .package-card {
+      background: white;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .package-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-primary);
+    }
+
+    .package-card.popular {
+      border: 2px solid var(--accent-primary);
+      box-shadow: 0 8px 40px rgba(28, 77, 141, 0.15);
+    }
+
+    .package-card.popular::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-primary);
+      color: white;
+      padding: 0.375rem 1rem;
+      border-radius: 0 0 8px 8px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .package-header {
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-secondary);
+    }
+
+    .package-card.popular .package-header {
+      background: linear-gradient(180deg, rgba(28, 77, 141, 0.05) 0%, white 100%);
+      padding-top: 2.5rem;
+    }
+
+    .package-tier {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .package-name {
+      font-size: 1.75rem;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .package-price {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 0.375rem;
+      font-family: var(--font-heading);
+    }
+
+    .package-price-currency {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-tertiary);
+    }
+
+    .package-price-amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .package-price-period {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+    }
+
+    .package-body {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .package-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+      margin-bottom: 2rem;
+    }
+
+    .package-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .package-features li::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: rgba(28, 77, 141, 0.1);
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231C4D8D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .package-features li.highlight {
+      color: var(--accent-primary);
+      font-weight: 600;
+    }
+
+    .package-footer {
+      padding: 0 2rem 2rem;
+    }
+
+    .package-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.875rem 1.5rem;
+      background: white;
+      color: var(--accent-primary);
+      border: 1px solid var(--border-default);
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .package-cta:hover {
+      background: var(--accent-primary);
+      color: white;
+      border-color: var(--accent-primary);
+    }
+
+    .package-card.popular .package-cta {
+      background: var(--accent-primary);
+      color: white;
+      border-color: var(--accent-primary);
+    }
+
+    .package-card.popular .package-cta:hover {
+      background: var(--accent-hover);
+    }
+
+    /* Sphere a la carte grid */
+    .sphere-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .sphere-item {
+      background: white;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 130px;
+    }
+
+    .sphere-item:hover {
+      border-color: var(--accent-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .sphere-item-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--bg-secondary);
+      color: var(--accent-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.9375rem;
+    }
+
+    .sphere-item-name {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .sphere-item-price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+      font-family: var(--font-heading);
+    }
+
+    .sphere-item-price .currency {
+      font-size: 0.75rem;
+      color: var(--text-tertiary);
+    }
+
+    .sphere-item-price .amount {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+
+    /* Comparison table */
+    .comparison-wrapper {
+      background: white;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem 1.25rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .comparison-table thead th {
+      background: var(--bg-navy);
+      color: white;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      padding: 1.5rem 1.25rem;
+    }
+
+    .comparison-table thead th:first-child {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+
+    .comparison-table tbody tr:hover {
+      background: var(--bg-secondary);
+    }
+
+    .comparison-table .check {
+      color: var(--success);
+      font-size: 1.125rem;
+    }
+
+    .comparison-table .dash {
+      color: var(--text-muted);
+    }
+
+    .comparison-category {
+      background: var(--bg-secondary);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+
+    .comparison-category td {
+      padding: 0.75rem 1.25rem !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .tier-grid { grid-template-columns: repeat(2, 1fr); }
+      .package-grid { grid-template-columns: 1fr; }
+      .sphere-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .tier-grid { grid-template-columns: 1fr; }
+      .sphere-grid { grid-template-columns: repeat(2, 1fr); }
+      .comparison-wrapper { overflow-x: auto; }
+      .comparison-table { min-width: 700px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/img/alnilam.png" alt="Alnilam" class="nav-brand-logo" />
+      <span class="nav-brand-text">ALNILAM</span>
+    </a>
+    <div class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="catalog.html" class="nav-link">Katalog</a>
+      <a href="pricing.html" class="nav-link active">Pricing</a>
+      <a href="creators.html" class="nav-link">Creators</a>
+      <a href="about.html" class="nav-link">About</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+      <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="pricing-hero">
+  <div class="container">
+    <div class="pricing-hero-content">
+      <div class="eyebrow mb-2">PRICING · From atom to supernova</div>
+      <h1 class="display-2 mb-3">Pricing that scales<br /><span class="text-accent">with your ambition.</span></h1>
+      <p style="font-size: 1.25rem; color: var(--text-tertiary); max-width: 700px; margin: 0 auto;">
+        Dari single konten sampai full marketing ecosystem. Pilih paket sesuai skala bisnis Anda —
+        upgrade kapan saja seiring pertumbuhan.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Tier Overview -->
+<section style="padding: 0 0 3rem;">
+  <div class="container">
+    <div class="tier-grid">
+
+      <!-- Atom -->
+      <div class="tier-card">
+        <div class="tier-icon">
+          <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="1"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-60 12 12)"/>
+          </svg>
+        </div>
+        <div class="tier-eyebrow">TIER 01</div>
+        <div class="tier-name">Atom</div>
+        <p class="tier-desc">Content creation basic untuk mulai sosmed presence</p>
+        <div class="tier-price">Mulai Rp 299rb</div>
+        <span class="tier-price-suffix">/ paket satuan</span>
+        <a href="#atom" class="btn btn-outline" style="width: 100%;">Lihat Paket Atom</a>
+      </div>
+
+      <!-- Sphere -->
+      <div class="tier-card">
+        <div class="tier-icon">
+          <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="tier-eyebrow">TIER 02</div>
+        <div class="tier-name">Sphere</div>
+        <p class="tier-desc">Brand collateral & business design a la carte</p>
+        <div class="tier-price">Mulai Rp 149rb</div>
+        <span class="tier-price-suffix">/ item</span>
+        <a href="#sphere" class="btn btn-outline" style="width: 100%;">Lihat Item Sphere</a>
+      </div>
+
+      <!-- Epsilon (featured — Alnilam is Epsilon Orionis) -->
+      <div class="tier-card featured">
+        <span class="tier-badge-popular">MOST POPULAR</span>
+        <div class="tier-icon">
+          <svg width="36" height="36" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/>
+          </svg>
+        </div>
+        <div class="tier-eyebrow">TIER 03 · SIGNATURE</div>
+        <div class="tier-name">Epsilon</div>
+        <p class="tier-desc">Social media growth — full management bulanan</p>
+        <div class="tier-price">Mulai Rp 2.999.000</div>
+        <span class="tier-price-suffix">/ bulan</span>
+        <a href="#epsilon" class="btn btn-accent" style="width: 100%;">Lihat Paket Epsilon</a>
+      </div>
+
+      <!-- Supernova -->
+      <div class="tier-card">
+        <div class="tier-icon">
+          <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+        </div>
+        <div class="tier-eyebrow">TIER 04 · ENTERPRISE</div>
+        <div class="tier-name">Supernova</div>
+        <p class="tier-desc">Full marketing ecosystem — end-to-end strategy</p>
+        <div class="tier-price">Mulai Rp 14.999.000</div>
+        <span class="tier-price-suffix">/ bulan</span>
+        <a href="#supernova" class="btn btn-outline" style="width: 100%;">Lihat Paket Supernova</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Atom detail -->
+<section id="atom" class="package-section section-tint">
+  <div class="container">
+    <div class="package-section-header">
+      <div class="package-section-icon">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="1"/>
+          <ellipse cx="12" cy="12" rx="10" ry="4"/>
+          <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+          <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-60 12 12)"/>
+        </svg>
+      </div>
+      <div>
+        <div class="eyebrow mb-1">TIER 01</div>
+        <h2 style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading);">Atom — Content Creation</h2>
+        <p style="color: var(--text-tertiary); margin-top: 0.25rem;">Building blocks konten. Perfect untuk baru mulai atau kebutuhan single project.</p>
+      </div>
+    </div>
+
+    <div class="package-grid">
+
+      <!-- Atom Electron -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-tier">ATOM · ENTRY</div>
+          <div class="package-name">Electron</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">299rb</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>2 Konten</strong> (Design & Reels Basic)</li>
+            <li>Caption copywriting</li>
+            <li>1 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Order Atom Electron →</button>
+        </div>
+      </div>
+
+      <!-- Atom Neutron (popular) -->
+      <div class="package-card popular">
+        <div class="package-header">
+          <div class="package-tier">ATOM · POPULAR</div>
+          <div class="package-name">Neutron</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">799rb</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>8 Konten Design</strong>*</li>
+            <li><strong>2 Reels Basic</strong>*</li>
+            <li>Caption copywriting</li>
+            <li>2 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Order Atom Neutron →</button>
+        </div>
+      </div>
+
+      <!-- Atom Proton -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-tier">ATOM · ADVANCED</div>
+          <div class="package-name">Proton</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">1,999K</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>20 Konten Design</strong>*</li>
+            <li><strong>5 Reels Basic</strong>*</li>
+            <li class="highlight">Content Plan 2 Minggu</li>
+            <li>Caption copywriting</li>
+            <li>3 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Order Atom Proton →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sphere detail -->
+<section id="sphere" class="package-section">
+  <div class="container">
+    <div class="package-section-header">
+      <div class="package-section-icon">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="eyebrow mb-1">TIER 02</div>
+        <h2 style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading);">Sphere — Brand Collateral & Business Design</h2>
+        <p style="color: var(--text-tertiary); margin-top: 0.25rem;">A la carte design items. Order satuan sesuai kebutuhan spesifik brand Anda.</p>
+      </div>
+    </div>
+
+    <!-- Sphere Starter (a la carte) -->
+    <div style="margin-bottom: 3rem;">
+      <div class="flex-between mb-3">
+        <h3 style="font-size: 1.25rem; font-weight: 700;">Sphere Starter <span style="color: var(--text-tertiary); font-weight: 400; font-size: 0.9375rem;">— (satuan)</span></h3>
+        <span class="badge">12 items available</span>
+      </div>
+
+      <div class="sphere-grid">
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📄</div>
+            <div class="sphere-item-name">Flyer</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">149.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📃</div>
+            <div class="sphere-item-name">Poster</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">199.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📑</div>
+            <div class="sphere-item-name">Brochure</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">399.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📚</div>
+            <div class="sphere-item-name">Catalogue</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">699.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📋</div>
+            <div class="sphere-item-name">Menu Basic</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">249.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📖</div>
+            <div class="sphere-item-name">Menu Premium</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">599.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">🏷️</div>
+            <div class="sphere-item-name">Label Produk</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">249.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📦</div>
+            <div class="sphere-item-name">Packaging</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">699.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📦</div>
+            <div class="sphere-item-name">Packaging Pro</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">1.499K</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">🏢</div>
+            <div class="sphere-item-name">Company Profile</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">999.000</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">📊</div>
+            <div class="sphere-item-name">Sales Deck</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">1.199K</span>
+          </div>
+        </div>
+
+        <div class="sphere-item">
+          <div>
+            <div class="sphere-item-icon">🎨</div>
+            <div class="sphere-item-name">Brand Foundation</div>
+          </div>
+          <div class="sphere-item-price">
+            <span class="currency">Rp</span>
+            <span class="amount">2.499K</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sphere Bundle placeholder -->
+    <div style="background: var(--bg-secondary); border: 1px dashed var(--border-default); border-radius: 12px; padding: 2rem; text-align: center;">
+      <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎁</div>
+      <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Sphere Bundle <span class="badge badge-warning" style="vertical-align: middle;">Coming Soon</span></h3>
+      <p style="color: var(--text-tertiary); max-width: 500px; margin: 0 auto;">
+        Bundle beberapa item Sphere dengan discount menarik. Detail bundle & harga akan diumumkan.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Epsilon detail -->
+<section id="epsilon" class="package-section section-tint pattern-constellation">
+  <div class="container">
+    <div class="package-section-header">
+      <div class="package-section-icon" style="background: rgba(28, 77, 141, 0.1);">
+        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="eyebrow mb-1">TIER 03 · SIGNATURE</div>
+        <h2 style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading);">Epsilon — Social Media Growth</h2>
+        <p style="color: var(--text-tertiary); margin-top: 0.25rem;">Named after Epsilon Orionis (Alnilam itself, ⭐ bintang tengah Orion's Belt). Full monthly management.</p>
+      </div>
+    </div>
+
+    <div class="package-grid">
+
+      <!-- Epsilon Essentials -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-tier">EPSILON · ENTRY</div>
+          <div class="package-name">Essentials</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">2,999K</span>
+            <span class="package-price-period">/ bln</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>15 Konten Design</strong>*</li>
+            <li><strong>3 Reels Basic</strong>*</li>
+            <li>Social Media Management</li>
+            <li>Content Calendar Bulanan</li>
+            <li>Caption & Copywriting</li>
+            <li>Performance Report</li>
+            <li class="highlight">1 SPHERE / bulan**</li>
+            <li>3 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Start Epsilon Essentials →</button>
+        </div>
+      </div>
+
+      <!-- Epsilon Standard (popular) -->
+      <div class="package-card popular">
+        <div class="package-header">
+          <div class="package-tier">EPSILON · POPULAR</div>
+          <div class="package-name">Standard</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">4,999K</span>
+            <span class="package-price-period">/ bln</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>25 Konten Design</strong>*</li>
+            <li><strong>6 Reels Basic</strong>*</li>
+            <li>Social Media Management</li>
+            <li>Content Calendar Bulanan</li>
+            <li>Caption & Copywriting</li>
+            <li>Performance Report</li>
+            <li class="highlight">2 SPHERE / bulan**</li>
+            <li>8 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Start Epsilon Standard →</button>
+        </div>
+      </div>
+
+      <!-- Epsilon Orionis (signature) -->
+      <div class="package-card">
+        <div class="package-header" style="background: linear-gradient(135deg, rgba(28, 77, 141, 0.08) 0%, rgba(189, 232, 245, 0.08) 100%);">
+          <div class="package-tier">EPSILON · SIGNATURE ⭐</div>
+          <div class="package-name">Orionis</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">7,999K</span>
+            <span class="package-price-period">/ bln</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>45 Konten Design</strong>*</li>
+            <li><strong>10 Reels Basic</strong>*</li>
+            <li class="highlight">Full Content Strategy</li>
+            <li class="highlight">Campaign Planning</li>
+            <li>Social Media Management</li>
+            <li>Content Calendar Bulanan</li>
+            <li>Caption & Copywriting</li>
+            <li>Performance Report</li>
+            <li class="highlight">4 SPHERE / bulan**</li>
+            <li>15 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Start Epsilon Orionis →</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align: center; color: var(--text-tertiary); font-size: 0.875rem; margin-top: 2rem;">
+      ** SPHERE = 1 item design dari kategori Sphere (Flyer/Poster/Menu/dsb) inklusif dalam paket bulanan
+    </p>
+  </div>
+</section>
+
+<!-- Supernova detail -->
+<section id="supernova" class="package-section pattern-orbits">
+  <div class="container">
+    <div class="package-section-header">
+      <div class="package-section-icon">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          <circle cx="12" cy="12" r="4"/>
+        </svg>
+      </div>
+      <div>
+        <div class="eyebrow mb-1">TIER 04 · ENTERPRISE</div>
+        <h2 style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading);">Supernova — Marketing Ecosystem</h2>
+        <p style="color: var(--text-tertiary); margin-top: 0.25rem;">Full-scale digital marketing. Untuk brand yang siap dominasi market.</p>
+      </div>
+    </div>
+
+    <div class="package-grid">
+
+      <!-- Supernova Gamma -->
+      <div class="package-card">
+        <div class="package-header">
+          <div class="package-tier">SUPERNOVA · ENTRY</div>
+          <div class="package-name">Gamma</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">14,999K</span>
+            <span class="package-price-period">/ bln</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>50 Konten Design</strong>*</li>
+            <li><strong>8 Reels Basic</strong>*</li>
+            <li class="highlight">Full Content Strategy</li>
+            <li>Campaign Planning</li>
+            <li>Social Media Management</li>
+            <li>Content Calendar Bulanan</li>
+            <li>Caption & Copywriting</li>
+            <li>Performance Report</li>
+            <li class="highlight">Website/Landing Page Maintenance</li>
+            <li>SEO Basic Setup</li>
+            <li class="highlight">6 SPHERE / bulan**</li>
+            <li>15 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Contact Sales →</button>
+        </div>
+      </div>
+
+      <!-- Supernova Giant (popular) -->
+      <div class="package-card popular">
+        <div class="package-header">
+          <div class="package-tier">SUPERNOVA · POPULAR</div>
+          <div class="package-name">Giant</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">29,999K</span>
+            <span class="package-price-period">/ bln</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>80 Konten Design</strong>*</li>
+            <li><strong>15 Reels Basic</strong>*</li>
+            <li class="highlight">Full Content Strategy</li>
+            <li class="highlight">Campaign Planning + Execution</li>
+            <li>Social Media Management</li>
+            <li>Content Calendar Bulanan</li>
+            <li>Caption & Copywriting</li>
+            <li>Performance Report</li>
+            <li class="highlight">Website & Landing Maintenance</li>
+            <li class="highlight">SEO Optimization</li>
+            <li class="highlight">8 SPHERE / bulan**</li>
+            <li>25 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Contact Sales →</button>
+        </div>
+      </div>
+
+      <!-- Supernova Grande (max) -->
+      <div class="package-card">
+        <div class="package-header" style="background: linear-gradient(135deg, rgba(28, 77, 141, 0.1) 0%, rgba(15, 40, 84, 0.1) 100%);">
+          <div class="package-tier">SUPERNOVA · MAX 🌟</div>
+          <div class="package-name">Grande</div>
+          <div class="package-price">
+            <span class="package-price-currency">Rp</span>
+            <span class="package-price-amount">59,999K</span>
+            <span class="package-price-period">/ bln</span>
+          </div>
+        </div>
+        <div class="package-body">
+          <ul class="package-features">
+            <li><strong>120 Konten Design</strong>*</li>
+            <li><strong>25 Reels Basic</strong>*</li>
+            <li class="highlight">Full Content Strategy</li>
+            <li class="highlight">Full Funnel Strategy</li>
+            <li class="highlight">Campaign Planning + Execution</li>
+            <li>Social Media Management</li>
+            <li>Content Calendar Bulanan</li>
+            <li>Caption & Copywriting</li>
+            <li>Performance Report</li>
+            <li>Website & Landing Maintenance</li>
+            <li class="highlight">Advanced SEO</li>
+            <li class="highlight">15 SPHERE / bulan**</li>
+            <li>40 Point Revisi</li>
+          </ul>
+        </div>
+        <div class="package-footer">
+          <button class="package-cta">Contact Sales →</button>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align: center; color: var(--text-tertiary); font-size: 0.875rem; margin-top: 2rem;">
+      Butuh custom scope? Enterprise inquiry welcome. <a href="#" class="text-accent" style="font-weight: 600;">Kontak sales →</a>
+    </p>
+  </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="section section-tint">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow mb-2">FEATURE COMPARISON</div>
+      <h2 class="display-2">Compare all tiers</h2>
+    </div>
+
+    <div class="comparison-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Atom</th>
+            <th>Sphere</th>
+            <th>Epsilon</th>
+            <th>Supernova</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="comparison-category">
+            <td colspan="5">Content Volume</td>
+          </tr>
+          <tr>
+            <td>Konten Design / bulan</td>
+            <td>2 – 20</td>
+            <td class="dash">—</td>
+            <td>15 – 45</td>
+            <td>50 – 120</td>
+          </tr>
+          <tr>
+            <td>Reels Basic / bulan</td>
+            <td>0 – 5</td>
+            <td class="dash">—</td>
+            <td>3 – 10</td>
+            <td>8 – 25</td>
+          </tr>
+          <tr>
+            <td>Sphere Items / bulan</td>
+            <td class="dash">—</td>
+            <td>a la carte</td>
+            <td>1 – 4</td>
+            <td>6 – 15</td>
+          </tr>
+
+          <tr class="comparison-category">
+            <td colspan="5">Strategy & Planning</td>
+          </tr>
+          <tr>
+            <td>Content Plan</td>
+            <td>2 minggu (Proton)</td>
+            <td class="dash">—</td>
+            <td class="check">✓ Monthly</td>
+            <td class="check">✓ Monthly</td>
+          </tr>
+          <tr>
+            <td>Full Content Strategy</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td>Orionis only</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Campaign Planning</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td>Orionis only</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Campaign Execution</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td>Giant & Grande</td>
+          </tr>
+          <tr>
+            <td>Full Funnel Strategy</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td>Grande only</td>
+          </tr>
+
+          <tr class="comparison-category">
+            <td colspan="5">Web & SEO</td>
+          </tr>
+          <tr>
+            <td>Website/LP Maintenance</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>SEO</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td>Basic → Advanced</td>
+          </tr>
+
+          <tr class="comparison-category">
+            <td colspan="5">Operations</td>
+          </tr>
+          <tr>
+            <td>Social Media Management</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Caption & Copywriting</td>
+            <td class="check">✓</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Performance Report</td>
+            <td class="dash">—</td>
+            <td class="dash">—</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Revisi</td>
+            <td>1 – 3 pts</td>
+            <td>Per project</td>
+            <td>3 – 15 pts</td>
+            <td>15 – 40 pts</td>
+          </tr>
+
+          <tr class="comparison-category">
+            <td colspan="5">Pricing</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">Starting from</td>
+            <td style="font-weight: 700; color: var(--accent-primary);">Rp 299rb</td>
+            <td style="font-weight: 700; color: var(--accent-primary);">Rp 149rb</td>
+            <td style="font-weight: 700; color: var(--accent-primary);">Rp 2.999.000/bln</td>
+            <td style="font-weight: 700; color: var(--accent-primary);">Rp 14.999.000/bln</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container-narrow">
+    <div class="text-center mb-5">
+      <div class="eyebrow mb-2">FAQ</div>
+      <h2 class="display-2">Frequently asked</h2>
+    </div>
+
+    <details class="filter-section" style="border-top: 1px solid var(--border-subtle); padding: 1.5rem 0;">
+      <summary class="filter-summary" style="font-size: 1.125rem; padding: 0;">
+        <span>Apa arti "* Konten" dan "* Reels Basic"?</span>
+        <svg class="filter-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </summary>
+      <div class="filter-body" style="color: var(--text-tertiary); font-size: 0.9375rem; line-height: 1.7;">
+        Konten Design = static graphic post untuk feed IG/FB (single image, carousel, atau template).
+        Reels Basic = video pendek 15-30 detik dengan template editing standar (transisi, teks, audio dari library).
+        Kalau butuh Reels advanced dengan shooting kustom, tambah Sphere Video atau upgrade tier.
+      </div>
+    </details>
+
+    <details class="filter-section" style="border-top: 1px solid var(--border-subtle); padding: 1.5rem 0;">
+      <summary class="filter-summary" style="font-size: 1.125rem; padding: 0;">
+        <span>Kenapa dinamai Epsilon Orionis?</span>
+        <svg class="filter-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </summary>
+      <div class="filter-body" style="color: var(--text-tertiary); font-size: 0.9375rem; line-height: 1.7;">
+        Alnilam <em>adalah</em> Epsilon Orionis — bintang tengah paling terang di sabuk Orion. Paket Epsilon
+        Orionis adalah signature package kami, mirip dengan bintang yang jadi identitas platform.
+      </div>
+    </details>
+
+    <details class="filter-section" style="border-top: 1px solid var(--border-subtle); padding: 1.5rem 0;">
+      <summary class="filter-summary" style="font-size: 1.125rem; padding: 0;">
+        <span>Bisa upgrade/downgrade paket?</span>
+        <svg class="filter-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </summary>
+      <div class="filter-body" style="color: var(--text-tertiary); font-size: 0.9375rem; line-height: 1.7;">
+        Bisa. Upgrade instant (tambah pro-rata di siklus berikutnya). Downgrade efektif di siklus billing selanjutnya
+        (tidak ada refund untuk paket yang sudah berjalan). Kontak support untuk switch.
+      </div>
+    </details>
+
+    <details class="filter-section" style="border-top: 1px solid var(--border-subtle); padding: 1.5rem 0;">
+      <summary class="filter-summary" style="font-size: 1.125rem; padding: 0;">
+        <span>SPHERE per bulan itu maksudnya apa?</span>
+        <svg class="filter-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </summary>
+      <div class="filter-body" style="color: var(--text-tertiary); font-size: 0.9375rem; line-height: 1.7;">
+        Di paket Epsilon & Supernova, Anda dapat kuota Sphere item per bulan (bebas pilih dari 12 items).
+        Misal Epsilon Standard = 2 Sphere/bulan, bisa pilih 1 Flyer + 1 Menu Premium, atau 2 Poster, dst.
+        Unused quota tidak carry-over ke bulan berikutnya.
+      </div>
+    </details>
+
+    <details class="filter-section" style="border-top: 1px solid var(--border-subtle); padding: 1.5rem 0;">
+      <summary class="filter-summary" style="font-size: 1.125rem; padding: 0;">
+        <span>Bagaimana sistem revisi bekerja?</span>
+        <svg class="filter-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </summary>
+      <div class="filter-body" style="color: var(--text-tertiary); font-size: 0.9375rem; line-height: 1.7;">
+        1 point revisi = 1 permintaan perubahan (bebas apa saja, dalam scope). Kalau kuota habis, revisi tambahan
+        dikenakan biaya per point. Revisi major (ganti konsep total) counted sebagai 2-3 points sesuai severity.
+      </div>
+    </details>
+
+    <details class="filter-section" style="border-top: 1px solid var(--border-subtle); padding: 1.5rem 0; border-bottom: 1px solid var(--border-subtle);">
+      <summary class="filter-summary" style="font-size: 1.125rem; padding: 0;">
+        <span>Ada kontrak minimum berlangganan?</span>
+        <svg class="filter-chevron" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </summary>
+      <div class="filter-body" style="color: var(--text-tertiary); font-size: 0.9375rem; line-height: 1.7;">
+        Atom & Sphere: satu kali order, tidak ada kontrak. Epsilon: minimum 3 bulan (recommended untuk lihat hasil).
+        Supernova: minimum 6 bulan (karena strategy butuh waktu execution). Detail T&C di kontrak layanan.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-dark section">
+  <div class="container">
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(189, 232, 245, 0.15) 1px, transparent 0); background-size: 32px 32px; opacity: 0.4; pointer-events: none;"></div>
+    <div style="text-align: center; position: relative;">
+      <div class="eyebrow mb-2">STILL DECIDING?</div>
+      <h2 class="display-2 mb-3">
+        Not sure which tier?<br />
+        <span style="color: var(--accent-highlight);">Talk to us.</span>
+      </h2>
+      <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 0 auto 2rem;">
+        Free consultation 30 menit. Kami bantu pilih paket yang tepat untuk budget & goal Anda.
+      </p>
+      <div class="flex gap-2" style="justify-content: center;">
+        <a href="#" class="btn btn-white btn-lg">Book Free Consultation</a>
+        <a href="#" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.3);">WhatsApp Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-capcut">
+  <div class="container">
+    <div class="footer-newsletter">
+      <div class="footer-newsletter-text">
+        <h3>Get the latest from Alnilam</h3>
+        <p>Tips, insights, dan creator spotlights langsung ke inbox Anda. Gratis selamanya.</p>
+      </div>
+      <form class="footer-newsletter-form">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <img src="assets/img/alnilam.png" alt="Alnilam" />
+        <div class="footer-brand-col-name">ALNILAM</div>
+        <p class="footer-brand-col-desc">
+          Managed marketplace terdepan untuk brand dan content creator Indonesia.
+          Where brands meet world-class creators.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Packages</h4>
+        <ul>
+          <li><a href="#atom">Atom</a></li>
+          <li><a href="#sphere">Sphere</a></li>
+          <li><a href="#epsilon">Epsilon</a></li>
+          <li><a href="#supernova">Supernova</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Kit</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Creator Academy</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Alnilam. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

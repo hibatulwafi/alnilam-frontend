@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Analytics — Alnilam Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/theme.css" />
+
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+  <div class="sidebar-brand"><img src="../assets/img/alnilam.png" alt="Alnilam" class="nav-brand-logo" /><div><div>ALNILAM</div><div style="font-size:.6875rem;color:var(--accent-primary);letter-spacing:.1em;text-transform:uppercase;font-weight:500;">Admin</div></div></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Overview</div><ul class="sidebar-nav">
+    <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">◈</span><span>Dashboard</span></a></li>
+    <li><a href="analytics.html" class="sidebar-link active"><span class="sidebar-icon">◇</span><span>Analytics</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Marketplace</div><ul class="sidebar-nav">
+    <li><a href="products.html" class="sidebar-link"><span class="sidebar-icon">▤</span><span>Products</span></a></li>
+    <li><a href="categories.html" class="sidebar-link"><span class="sidebar-icon">▦</span><span>Categories</span></a></li>
+    <li><a href="orders.html" class="sidebar-link"><span class="sidebar-icon">▧</span><span>Orders <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">12</span></span></a></li>
+    <li><a href="projects.html" class="sidebar-link"><span class="sidebar-icon">◱</span><span>Projects</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Communication</div><ul class="sidebar-nav">
+    <li><a href="chats.html" class="sidebar-link"><span class="sidebar-icon">✉</span><span>Chats <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">7</span></span></a></li>
+    <li><a href="meetings.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Video Meetings</span></a></li>
+    <li><a href="notifications.html" class="sidebar-link"><span class="sidebar-icon">✱</span><span>Notifications</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">People</div><ul class="sidebar-nav">
+    <li><a href="users.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Users</span></a></li>
+    <li><a href="creators.html" class="sidebar-link"><span class="sidebar-icon">◎</span><span>Creators</span></a></li>
+    <li><a href="kyc.html" class="sidebar-link"><span class="sidebar-icon">✎</span><span>KYC Queue <span class="badge badge-warning" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">3</span></span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Finance</div><ul class="sidebar-nav">
+    <li><a href="transactions.html" class="sidebar-link"><span class="sidebar-icon">◐</span><span>Transactions</span></a></li>
+    <li><a href="payouts.html" class="sidebar-link"><span class="sidebar-icon">◑</span><span>Payouts</span></a></li>
+    <li><a href="refunds.html" class="sidebar-link"><span class="sidebar-icon">◒</span><span>Refunds</span></a></li>
+    <li><a href="vouchers.html" class="sidebar-link"><span class="sidebar-icon">◓</span><span>Vouchers</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Moderation</div><ul class="sidebar-nav">
+    <li><a href="disputes.html" class="sidebar-link"><span class="sidebar-icon">⚠</span><span>Disputes <span class="badge badge-danger" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">2</span></span></a></li>
+    <li><a href="support.html" class="sidebar-link"><span class="sidebar-icon">♨</span><span>Support Tickets</span></a></li>
+    <li><a href="audit-log.html" class="sidebar-link"><span class="sidebar-icon">✪</span><span>Audit Log</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">System</div><ul class="sidebar-nav">
+    <li><a href="settings.html" class="sidebar-link"><span class="sidebar-icon">✧</span><span>Settings</span></a></li>
+  </ul></div>
+  <div style="margin-top:auto;padding-top:2rem;border-top:1px solid var(--border-subtle);"><div style="display:flex;align-items:center;gap:.75rem;padding:.75rem .875rem;"><div style="width:32px;height:32px;background:var(--accent-primary);color:var(--bg-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem;">A</div><div style="flex:1;"><div style="font-size:.875rem;font-weight:600;">Admin Alnilam</div><div style="font-size:.75rem;color:var(--text-tertiary);">Super Admin</div></div><a href="../login.html" style="color:var(--text-tertiary);"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></a></div></div>
+</aside>
+<main class="main-content">
+
+  <div class="main-header">
+    <div><div class="eyebrow mb-1">OVERVIEW</div><h1>Analytics</h1></div>
+    <div style="display:flex;gap:.5rem;">
+      <select class="form-select" style="width:180px;font-size:.875rem;padding:.5rem .75rem;">
+        <option>Last 30 days</option>
+        <option>Last 7 days</option>
+        <option>Last 90 days</option>
+        <option>Year to date</option>
+      </select>
+      <button class="btn btn-accent btn-sm">Export PDF</button>
+    </div>
+  </div>
+
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);">
+    <div class="kpi-card"><div class="kpi-label">GMV</div><div class="kpi-value">Rp 428M</div><div class="kpi-change">↑ 24.3% vs prev period</div></div>
+    <div class="kpi-card"><div class="kpi-label">Platform Revenue</div><div class="kpi-value">Rp 64.2M</div><div class="kpi-change">15% take rate</div></div>
+    <div class="kpi-card"><div class="kpi-label">Active Users</div><div class="kpi-value">3,240</div><div class="kpi-change">↑ 18% MoM</div></div>
+    <div class="kpi-card"><div class="kpi-label">Repeat Client Rate</div><div class="kpi-value">62%</div><div class="kpi-change">↑ 4pt vs last quarter</div></div>
+  </div>
+
+  <!-- GMV chart -->
+  <div class="card mb-4">
+    <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center;">
+      <div><h3 style="font-weight:800;font-size:1.125rem;">GMV Trend</h3><div style="font-size:.8125rem;color:var(--text-tertiary);">Daily gross merchandise volume</div></div>
+      <div style="display:flex;gap:.375rem;"><button class="btn btn-outline btn-sm" style="background:var(--accent-primary);color:white;">GMV</button><button class="btn btn-ghost btn-sm">Orders</button><button class="btn btn-ghost btn-sm">Users</button></div>
+    </div>
+    <div style="padding:1.5rem;">
+      <svg viewBox="0 0 1000 260" style="width:100%;height:260px;">
+        <defs>
+          <linearGradient id="gmvGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1C4D8D" stop-opacity=".4"/><stop offset="100%" stop-color="#1C4D8D" stop-opacity="0"/></linearGradient>
+        </defs>
+        <!-- grid -->
+        <line x1="0" y1="40" x2="1000" y2="40" stroke="#E2E8F0" stroke-dasharray="2 2"/><line x1="0" y1="85" x2="1000" y2="85" stroke="#E2E8F0" stroke-dasharray="2 2"/><line x1="0" y1="130" x2="1000" y2="130" stroke="#E2E8F0" stroke-dasharray="2 2"/><line x1="0" y1="175" x2="1000" y2="175" stroke="#E2E8F0" stroke-dasharray="2 2"/><line x1="0" y1="220" x2="1000" y2="220" stroke="#E2E8F0" stroke-dasharray="2 2"/>
+        <text x="0" y="45" fill="#94A3B8" font-size="11">Rp 20M</text><text x="0" y="90" fill="#94A3B8" font-size="11">Rp 15M</text><text x="0" y="135" fill="#94A3B8" font-size="11">Rp 10M</text><text x="0" y="180" fill="#94A3B8" font-size="11">Rp 5M</text><text x="0" y="225" fill="#94A3B8" font-size="11">Rp 0M</text>
+        <!-- area -->
+        <path d="M20,180 L80,150 L140,165 L200,120 L260,105 L320,140 L380,90 L440,110 L500,75 L560,95 L620,60 L680,80 L740,55 L800,70 L860,45 L920,60 L980,40 L980,240 L20,240 Z" fill="url(#gmvGrad)"/>
+        <!-- line -->
+        <path d="M20,180 L80,150 L140,165 L200,120 L260,105 L320,140 L380,90 L440,110 L500,75 L560,95 L620,60 L680,80 L740,55 L800,70 L860,45 L920,60 L980,40" fill="none" stroke="#1C4D8D" stroke-width="3"/>
+        <!-- points -->
+        <circle cx="20" cy="180" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="80" cy="150" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="140" cy="165" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="200" cy="120" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="260" cy="105" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="320" cy="140" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="380" cy="90" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="440" cy="110" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="500" cy="75" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="560" cy="95" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="620" cy="60" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="680" cy="80" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="740" cy="55" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="800" cy="70" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="860" cy="45" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="920" cy="60" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/><circle cx="980" cy="40" r="4" fill="white" stroke="#1C4D8D" stroke-width="2"/>
+        <!-- labels -->
+        <text x="60" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">1</text><text x="125" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">3</text><text x="190" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">5</text><text x="255" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">7</text><text x="320" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">9</text><text x="385" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">11</text><text x="450" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">13</text><text x="515" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">15</text><text x="580" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">17</text><text x="645" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">19</text><text x="710" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">21</text><text x="775" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">23</text><text x="840" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">25</text><text x="905" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">27</text><text x="970" y="255" fill="#94A3B8" font-size="10" text-anchor="middle">29</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 2-col: category breakdown + top creators -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+    <div class="card">
+      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-subtle);"><h3 style="font-weight:800;">Revenue by Tier</h3></div>
+      <div style="padding:1.5rem;">
+        <div style="margin-bottom:1rem;">
+          <div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.375rem;"><span style="font-weight:700;color:#7C3AED;">Atom</span><span style="font-weight:700;">Rp 51.4M <span style="color:var(--text-tertiary);font-size:.75rem;">(12%)</span></span></div>
+          <div style="height:10px;background:var(--bg-secondary);border-radius:5px;overflow:hidden;"><div style="width:12%;height:100%;background:#7C3AED;"></div></div>
+          <div style="font-size:.75rem;color:var(--text-tertiary);margin-top:.25rem;">15 orders this month</div>
+        </div><div style="margin-bottom:1rem;">
+          <div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.375rem;"><span style="font-weight:700;color:#059669;">Sphere</span><span style="font-weight:700;">Rp 102.7M <span style="color:var(--text-tertiary);font-size:.75rem;">(18%)</span></span></div>
+          <div style="height:10px;background:var(--bg-secondary);border-radius:5px;overflow:hidden;"><div style="width:18%;height:100%;background:#059669;"></div></div>
+          <div style="font-size:.75rem;color:var(--text-tertiary);margin-top:.25rem;">24 orders this month</div>
+        </div><div style="margin-bottom:1rem;">
+          <div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.375rem;"><span style="font-weight:700;color:#1C4D8D;">Epsilon</span><span style="font-weight:700;">Rp 222.5M <span style="color:var(--text-tertiary);font-size:.75rem;">(48%)</span></span></div>
+          <div style="height:10px;background:var(--bg-secondary);border-radius:5px;overflow:hidden;"><div style="width:48%;height:100%;background:#1C4D8D;"></div></div>
+          <div style="font-size:.75rem;color:var(--text-tertiary);margin-top:.25rem;">52 orders this month</div>
+        </div><div style="margin-bottom:1rem;">
+          <div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:.375rem;"><span style="font-weight:700;color:#DC2626;">Supernova</span><span style="font-weight:700;">Rp 51.4M <span style="color:var(--text-tertiary);font-size:.75rem;">(22%)</span></span></div>
+          <div style="height:10px;background:var(--bg-secondary);border-radius:5px;overflow:hidden;"><div style="width:22%;height:100%;background:#DC2626;"></div></div>
+          <div style="font-size:.75rem;color:var(--text-tertiary);margin-top:.25rem;">9 orders this month</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-subtle);"><h3 style="font-weight:800;">Top Creators (by GMV)</h3></div>
+      <div style="padding:.5rem 0;">
+        <div style="display:flex;gap:.75rem;align-items:center;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);">
+          <div style="width:32px;height:32px;border-radius:50%;background:#FBBF24;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.75rem;">1</div>
+          <div style="flex:1;"><div style="font-weight:700;font-size:.875rem;">Rifqi Handoko</div><div style="font-size:.75rem;color:var(--text-tertiary);">Elite · Video · 127 projects · <span style="color:#F59E0B;">★</span> 4.9</div></div>
+          <div style="font-weight:800;color:var(--success);">Rp 47.2M</div>
+        </div><div style="display:flex;gap:.75rem;align-items:center;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);">
+          <div style="width:32px;height:32px;border-radius:50%;background:#94A3B8;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.75rem;">2</div>
+          <div style="flex:1;"><div style="font-weight:700;font-size:.875rem;">Bagas Prakoso</div><div style="font-size:.75rem;color:var(--text-tertiary);">Elite · SEO · 72 projects · <span style="color:#F59E0B;">★</span> 5</div></div>
+          <div style="font-weight:800;color:var(--success);">Rp 84.1M</div>
+        </div><div style="display:flex;gap:.75rem;align-items:center;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);">
+          <div style="width:32px;height:32px;border-radius:50%;background:#B45309;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.75rem;">3</div>
+          <div style="flex:1;"><div style="font-weight:700;font-size:.875rem;">Kayla Ramadhani</div><div style="font-size:.75rem;color:var(--text-tertiary);">Pro · Live · 145 projects · <span style="color:#F59E0B;">★</span> 4.9</div></div>
+          <div style="font-weight:800;color:var(--success);">Rp 54.7M</div>
+        </div><div style="display:flex;gap:.75rem;align-items:center;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);">
+          <div style="width:32px;height:32px;border-radius:50%;background:#B45309;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.75rem;">4</div>
+          <div style="flex:1;"><div style="font-weight:700;font-size:.875rem;">Amira Salsabila</div><div style="font-size:.75rem;color:var(--text-tertiary);">Elite · Design · 96 projects · <span style="color:#F59E0B;">★</span> 4.9</div></div>
+          <div style="font-weight:800;color:var(--success);">Rp 38.6M</div>
+        </div><div style="display:flex;gap:.75rem;align-items:center;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);">
+          <div style="width:32px;height:32px;border-radius:50%;background:#B45309;color:white;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.75rem;">5</div>
+          <div style="flex:1;"><div style="font-weight:700;font-size:.875rem;">Sinta Pramesti</div><div style="font-size:.75rem;color:var(--text-tertiary);">Pro · Photo · 103 projects · <span style="color:#F59E0B;">★</span> 4.8</div></div>
+          <div style="font-weight:800;color:var(--success);">Rp 29.4M</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Funnel + Retention -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+    <div class="card">
+      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-subtle);"><h3 style="font-weight:800;">Conversion Funnel</h3></div>
+      <div style="padding:1.5rem;">
+        <div style="margin-bottom:.75rem;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.375rem;"><span style="font-weight:700;font-size:.9375rem;">Visitors</span><span><strong>12,420</strong> <span style="color:var(--text-tertiary);font-size:.8125rem;">100%</span></span></div>
+          <div style="height:32px;background:var(--bg-secondary);border-radius:6px;overflow:hidden;position:relative;"><div style="width:100%;height:100%;background:#BDE8F5;border-radius:6px;display:flex;align-items:center;padding-left:.75rem;color:white;font-size:.75rem;font-weight:700;"></div></div>
+        </div><div style="margin-bottom:.75rem;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.375rem;"><span style="font-weight:700;font-size:.9375rem;">Sign-up</span><span><strong>2,847</strong> <span style="color:var(--text-tertiary);font-size:.8125rem;">22.9%</span></span></div>
+          <div style="height:32px;background:var(--bg-secondary);border-radius:6px;overflow:hidden;position:relative;"><div style="width:22.9%;height:100%;background:#4988C4;border-radius:6px;display:flex;align-items:center;padding-left:.75rem;color:white;font-size:.75rem;font-weight:700;">↓ 23%</div></div>
+        </div><div style="margin-bottom:.75rem;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.375rem;"><span style="font-weight:700;font-size:.9375rem;">First Browse</span><span><strong>1,892</strong> <span style="color:var(--text-tertiary);font-size:.8125rem;">15.2%</span></span></div>
+          <div style="height:32px;background:var(--bg-secondary);border-radius:6px;overflow:hidden;position:relative;"><div style="width:15.2%;height:100%;background:#1C4D8D;border-radius:6px;display:flex;align-items:center;padding-left:.75rem;color:white;font-size:.75rem;font-weight:700;">↓ 66%</div></div>
+        </div><div style="margin-bottom:.75rem;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.375rem;"><span style="font-weight:700;font-size:.9375rem;">Add to Cart</span><span><strong>687</strong> <span style="color:var(--text-tertiary);font-size:.8125rem;">5.5%</span></span></div>
+          <div style="height:32px;background:var(--bg-secondary);border-radius:6px;overflow:hidden;position:relative;"><div style="width:5.5%;height:100%;background:#0F2854;border-radius:6px;display:flex;align-items:center;padding-left:.75rem;color:white;font-size:.75rem;font-weight:700;">↓ 36%</div></div>
+        </div><div style="margin-bottom:.75rem;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.375rem;"><span style="font-weight:700;font-size:.9375rem;">Checkout</span><span><strong>412</strong> <span style="color:var(--text-tertiary);font-size:.8125rem;">3.3%</span></span></div>
+          <div style="height:32px;background:var(--bg-secondary);border-radius:6px;overflow:hidden;position:relative;"><div style="width:3.3%;height:100%;background:#C9A66B;border-radius:6px;display:flex;align-items:center;padding-left:.75rem;color:white;font-size:.75rem;font-weight:700;">↓ 60%</div></div>
+        </div><div style="margin-bottom:.75rem;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.375rem;"><span style="font-weight:700;font-size:.9375rem;">Paid</span><span><strong>387</strong> <span style="color:var(--text-tertiary);font-size:.8125rem;">3.1%</span></span></div>
+          <div style="height:32px;background:var(--bg-secondary);border-radius:6px;overflow:hidden;position:relative;"><div style="width:3.1%;height:100%;background:#059669;border-radius:6px;display:flex;align-items:center;padding-left:.75rem;color:white;font-size:.75rem;font-weight:700;">↓ 94%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-subtle);"><h3 style="font-weight:800;">Cohort Retention</h3></div>
+      <div style="padding:1.5rem;overflow-x:auto;">
+        <table style="width:100%;font-size:.75rem;border-collapse:collapse;">
+          <thead><tr><th style="text-align:left;padding:.375rem;">Cohort</th><th>M0</th><th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>M5</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:.375rem;font-weight:700;">Feb 2026</td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,1);color:white;padding:.375rem;border-radius:4px;font-weight:600;">100%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.68);color:white;padding:.375rem;border-radius:4px;font-weight:600;">68%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.54);color:white;padding:.375rem;border-radius:4px;font-weight:600;">54%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.48);color:var(--text-primary);padding:.375rem;border-radius:4px;font-weight:600;">48%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.42);color:var(--text-primary);padding:.375rem;border-radius:4px;font-weight:600;">42%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.38);color:var(--text-primary);padding:.375rem;border-radius:4px;font-weight:600;">38%</div></td></tr><tr><td style="padding:.375rem;font-weight:700;">Mar 2026</td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,1);color:white;padding:.375rem;border-radius:4px;font-weight:600;">100%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.72);color:white;padding:.375rem;border-radius:4px;font-weight:600;">72%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.58);color:white;padding:.375rem;border-radius:4px;font-weight:600;">58%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.52);color:white;padding:.375rem;border-radius:4px;font-weight:600;">52%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.46);color:var(--text-primary);padding:.375rem;border-radius:4px;font-weight:600;">46%</div></td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td></tr><tr><td style="padding:.375rem;font-weight:700;">Apr 2026</td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,1);color:white;padding:.375rem;border-radius:4px;font-weight:600;">100%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.74);color:white;padding:.375rem;border-radius:4px;font-weight:600;">74%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.62);color:white;padding:.375rem;border-radius:4px;font-weight:600;">62%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.56);color:white;padding:.375rem;border-radius:4px;font-weight:600;">56%</div></td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td></tr><tr><td style="padding:.375rem;font-weight:700;">May 2026</td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,1);color:white;padding:.375rem;border-radius:4px;font-weight:600;">100%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.78);color:white;padding:.375rem;border-radius:4px;font-weight:600;">78%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.64);color:white;padding:.375rem;border-radius:4px;font-weight:600;">64%</div></td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td></tr><tr><td style="padding:.375rem;font-weight:700;">Jun 2026</td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,1);color:white;padding:.375rem;border-radius:4px;font-weight:600;">100%</div></td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,0.81);color:white;padding:.375rem;border-radius:4px;font-weight:600;">81%</div></td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td></tr><tr><td style="padding:.375rem;font-weight:700;">Jul 2026</td><td style="text-align:center;padding:.25rem;"><div style="background:rgba(28,77,141,1);color:white;padding:.375rem;border-radius:4px;font-weight:600;">100%</div></td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td><td style="text-align:center;padding:.25rem;color:#94A3B8;">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+</div>
+</body>
+</html>

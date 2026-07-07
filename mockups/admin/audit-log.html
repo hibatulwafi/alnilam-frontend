@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Audit Log — Alnilam Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/theme.css" />
+
+</head>
+<body>
+<div class="admin-layout">
+<aside class="sidebar">
+  <div class="sidebar-brand"><img src="../assets/img/alnilam.png" alt="Alnilam" class="nav-brand-logo" /><div><div>ALNILAM</div><div style="font-size:.6875rem;color:var(--accent-primary);letter-spacing:.1em;text-transform:uppercase;font-weight:500;">Admin</div></div></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Overview</div><ul class="sidebar-nav">
+    <li><a href="dashboard.html" class="sidebar-link"><span class="sidebar-icon">◈</span><span>Dashboard</span></a></li>
+    <li><a href="analytics.html" class="sidebar-link"><span class="sidebar-icon">◇</span><span>Analytics</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Marketplace</div><ul class="sidebar-nav">
+    <li><a href="products.html" class="sidebar-link"><span class="sidebar-icon">▤</span><span>Products</span></a></li>
+    <li><a href="categories.html" class="sidebar-link"><span class="sidebar-icon">▦</span><span>Categories</span></a></li>
+    <li><a href="orders.html" class="sidebar-link"><span class="sidebar-icon">▧</span><span>Orders <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">12</span></span></a></li>
+    <li><a href="projects.html" class="sidebar-link"><span class="sidebar-icon">◱</span><span>Projects</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Communication</div><ul class="sidebar-nav">
+    <li><a href="chats.html" class="sidebar-link"><span class="sidebar-icon">✉</span><span>Chats <span class="badge badge-accent" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">7</span></span></a></li>
+    <li><a href="meetings.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Video Meetings</span></a></li>
+    <li><a href="notifications.html" class="sidebar-link"><span class="sidebar-icon">✱</span><span>Notifications</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">People</div><ul class="sidebar-nav">
+    <li><a href="users.html" class="sidebar-link"><span class="sidebar-icon">◉</span><span>Users</span></a></li>
+    <li><a href="creators.html" class="sidebar-link"><span class="sidebar-icon">◎</span><span>Creators</span></a></li>
+    <li><a href="kyc.html" class="sidebar-link"><span class="sidebar-icon">✎</span><span>KYC Queue <span class="badge badge-warning" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">3</span></span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Finance</div><ul class="sidebar-nav">
+    <li><a href="transactions.html" class="sidebar-link"><span class="sidebar-icon">◐</span><span>Transactions</span></a></li>
+    <li><a href="payouts.html" class="sidebar-link"><span class="sidebar-icon">◑</span><span>Payouts</span></a></li>
+    <li><a href="refunds.html" class="sidebar-link"><span class="sidebar-icon">◒</span><span>Refunds</span></a></li>
+    <li><a href="vouchers.html" class="sidebar-link"><span class="sidebar-icon">◓</span><span>Vouchers</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">Moderation</div><ul class="sidebar-nav">
+    <li><a href="disputes.html" class="sidebar-link"><span class="sidebar-icon">⚠</span><span>Disputes <span class="badge badge-danger" style="margin-left:auto;padding:.125rem .375rem;font-size:.6875rem;">2</span></span></a></li>
+    <li><a href="support.html" class="sidebar-link"><span class="sidebar-icon">♨</span><span>Support Tickets</span></a></li>
+    <li><a href="audit-log.html" class="sidebar-link active"><span class="sidebar-icon">✪</span><span>Audit Log</span></a></li>
+  </ul></div>
+  <div class="sidebar-section"><div class="sidebar-section-title">System</div><ul class="sidebar-nav">
+    <li><a href="settings.html" class="sidebar-link"><span class="sidebar-icon">✧</span><span>Settings</span></a></li>
+  </ul></div>
+  <div style="margin-top:auto;padding-top:2rem;border-top:1px solid var(--border-subtle);"><div style="display:flex;align-items:center;gap:.75rem;padding:.75rem .875rem;"><div style="width:32px;height:32px;background:var(--accent-primary);color:var(--bg-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.875rem;">A</div><div style="flex:1;"><div style="font-size:.875rem;font-weight:600;">Admin Alnilam</div><div style="font-size:.75rem;color:var(--text-tertiary);">Super Admin</div></div><a href="../login.html" style="color:var(--text-tertiary);"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></a></div></div>
+</aside>
+<main class="main-content">
+
+  <div class="main-header">
+    <div><div class="eyebrow mb-1">MODERATION</div><h1>Audit Log</h1></div>
+    <div style="display:flex;gap:.5rem;">
+      <button class="btn btn-outline btn-sm">Filter</button>
+      <button class="btn btn-outline btn-sm">Export</button>
+    </div>
+  </div>
+
+  <div style="background:var(--accent-highlight);border:1px solid var(--accent-light);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;gap:.75rem;align-items:center;">
+    <svg width="20" height="20" fill="none" stroke="var(--accent-primary)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    <div style="font-size:.875rem;color:var(--text-primary);"><strong>All admin actions are logged.</strong> Retention: 2 years. Cryptographically signed and tamper-evident. <a href="#" style="color:var(--accent-primary);font-weight:600;">Verify integrity →</a></div>
+  </div>
+
+  <div class="card">
+    <div style="padding:1rem 1.5rem;border-bottom:1px solid var(--border-subtle);display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;">
+      <select class="form-select" style="width:180px;font-size:.875rem;padding:.5rem .75rem;"><option>All actors</option><option>Admin Sarah</option><option>Admin Ari</option><option>System</option></select>
+      <select class="form-select" style="width:180px;font-size:.875rem;padding:.5rem .75rem;"><option>All actions</option><option>User modifications</option><option>Financial</option><option>Data export</option><option>Login/Auth</option></select>
+      <select class="form-select" style="width:160px;font-size:.875rem;padding:.5rem .75rem;"><option>Last 24 hours</option><option>Last 7 days</option><option>Last 30 days</option></select>
+      <input type="search" placeholder="Search..." class="form-input" style="margin-left:auto;width:250px;font-size:.875rem;padding:.5rem .75rem;" />
+    </div>
+
+    <div style="padding:0;">
+      <div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">10:24:31</div>
+        <div style="font-weight:700;">Admin Sarah</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">APPROVED KYC</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">user:USR-8472 (Rudi Santoso)</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.44</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">10:18:04</div>
+        <div style="font-weight:700;">Admin Ari</div>
+        <div><span class="badge badge-warning" style="font-family:monospace;font-size:.6875rem;">TRIGGERED PAYOUT</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">payout:PYT-2026-041 · Rp 10.54M · to Rifqi Handoko</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.12</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">10:14:22</div>
+        <div style="font-weight:700;">System</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">AUTO_REFUND</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">refund:RFD-041 · Rp 549K · order abandoned</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">—</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">10:04:15</div>
+        <div style="font-weight:700;">Admin Sarah</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">JOINED CHAT (silent)</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">chat:ORD-0847 · Diana ↔ Rifqi · Watch mode</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.44</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">09:47:33</div>
+        <div style="font-weight:700;">Admin Ari</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">EDITED PRODUCT</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">product:PRD-2841 · Epsilon Standard · price unchanged, description updated</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.12</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">09:32:11</div>
+        <div style="font-weight:700;">Admin Sarah</div>
+        <div><span class="badge badge-danger" style="font-family:monospace;font-size:.6875rem;">REJECTED KYC</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">user:USR-8489 (Deni Setiawan) · Reason: dokumen tidak valid</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.44</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">09:18:47</div>
+        <div style="font-weight:700;">System</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">WEBHOOK_RECEIVED</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">midtrans:payment.settlement · TXN-8472365 · Rp 5.493K</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">—</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">09:15:22</div>
+        <div style="font-weight:700;">Admin Ari</div>
+        <div><span class="badge badge-danger" style="font-family:monospace;font-size:.6875rem;">SUSPENDED USER</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">user:USR-7621 (Andi Setiawan) · Reason: TOS violation</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.12</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">08:47:03</div>
+        <div style="font-weight:700;">Admin Sarah</div>
+        <div><span class="badge badge-warning" style="font-family:monospace;font-size:.6875rem;">CREATED VOUCHER</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">voucher:WELCOME10 · 10% off · 1000 usage cap</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.44</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">08:32:11</div>
+        <div style="font-weight:700;">System</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">SESSION_EXPIRED</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">user:admin-3 · Session timeout after 8h</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">—</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">08:14:55</div>
+        <div style="font-weight:700;">Admin Ari</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">LOGIN</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">user:admin-2 · 2FA verified</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.12</div>
+      </div><div style="display:grid;grid-template-columns:110px 160px 200px 1fr 130px;padding:.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);align-items:center;font-size:.8125rem;">
+        <div style="font-family:monospace;color:var(--text-tertiary);">08:12:04</div>
+        <div style="font-weight:700;">Admin Sarah</div>
+        <div><span class="badge badge-info" style="font-family:monospace;font-size:.6875rem;">LOGIN</span></div>
+        <div style="color:var(--text-secondary);font-family:monospace;font-size:.75rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">user:admin-1 · 2FA verified</div>
+        <div style="font-family:monospace;font-size:.75rem;color:var(--text-tertiary);text-align:right;">172.24.10.44</div>
+      </div>
+    </div>
+    <div style="padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;font-size:.875rem;color:var(--text-tertiary);">
+      <span>Showing last 12 entries · 2,847 total this month</span>
+      <button class="btn btn-outline btn-sm">Load more</button>
+    </div>
+  </div>
+
+</main>
+</div>
+</body>
+</html>
